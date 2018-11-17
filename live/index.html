@@ -1,1 +1,134 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Josh's Snow Day Prediction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+        <link rel="apple-touch-icon" href="favicon.png">
+        <meta name="google-site-verification" content="-ypOjVw6descs20mnW17STm32JT_oUODTrBlNRXDiwg"/>
+        <meta property="og:title" content="Josh's Snow Day Prediction"/>
+        <meta property="og:image" content="https://docs.google.com/drawings/d/e/2PACX-1vSehM4Lclml6dAeFwmBOMFE1qHB8Y7ketkgGpFlWpmA2ZkU-yYCS-GZC4oENmhpmfxKhG50GgfIb_DW/pub?w=1078&amp;h=1023"/>
+        <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+        <style>
+            #day1 {
+                width: 100%;
+                max-width: 600px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+            #day2 {
+                width: 100%;
+                max-width: 600px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+            #day3 {
+                width: 100%;
+                max-width: 600px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #navbar {
+                z-index: 1;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(177, 190, 224);
+                position: fixed;
+                width: 101%;
+                margin-top: -10px;
+                margin-left: -10px;
+                box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            }
+            #navbar li {
+                float: left;
+            }
+            #navbar li a {
+                display: block;
+                display: -webkit-block;
+                text-align: -webkit-center -webkit-center;
+                text-align: center center;
+                padding-top: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 5px;
+                text-decoration: none;
+                font-size: 25px;
+                font-family: "Teko", sans-serif;
+            }
+            #buffer {
+                height: 50px;
+            }
+            #live {
+                background-color: rgb(0, 95, 189);
+            }
+            #live a {
+                color: rgb(255, 255, 255);
+                -o-transition:.2s;
+                -ms-transition:.2s;
+                -moz-transition:.2s;
+                -webkit-transition:.2s;
+                transition:.2s;
+            }
+            #live a:hover {
+                background-color: rgb(255, 255, 255);
+                color: black;
+            }
+            #future {
+                background-color: rgb(87, 131, 207);
+            }
+            #future a {
+                color: rgb(255, 255, 255);
+                -o-transition:.2s;
+                -ms-transition:.2s;
+                -moz-transition:.2s;
+                -webkit-transition:.2s;
+                transition:.2s;
+            }
+            #future a:hover {
+                background-color: rgb(255, 255, 255);
+                color: black;
+            }
+            #past {
+                background-color: rgb(128, 158, 214);
+            }
+            #past a {
+                color: rgb(255, 255, 255);
+                -o-transition:.2s;
+                -ms-transition:.2s;
+                -moz-transition:.2s;
+                -webkit-transition:.2s;
+                transition:.2s;
+            }
+            #past a:hover {
+                background-color: rgb(255, 255, 255);
+                color: black;
+            }
+        </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129270386-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-129270386-1');
+        </script>
+    </head>
+    <body>
+        <ul id="navbar">
+            <li class="select" id="live"><a href="/live"><b>LIVE PREDICTION</b></a></li>
+            <li class="select" id="future"><a href="/future"><b>FUTURE</b></a></li>
+            <li class="select" id="past"><a href="/past"><b>PAST</b></a></li>
+        </ul>
+        <img id="day1" src="https://docs.google.com/drawings/d/e/2PACX-1vSehM4Lclml6dAeFwmBOMFE1qHB8Y7ketkgGpFlWpmA2ZkU-yYCS-GZC4oENmhpmfxKhG50GgfIb_DW/pub?w=1078&amp;h=1023">
+        <img id="day2" src="https://docs.google.com/drawings/d/e/2PACX-1vTLt6YzOaDRtuGLfjFWuZ2YqXO0w7g37rvd0i-rBeJykDXjEqJ42TADpPs5wXvbF5XuBgSwcccN062h/pub?w=1078&amp;h=1023">
+        <img id="day3" src="https://docs.google.com/drawings/d/e/2PACX-1vTUOaesNfaYF53Qsi0ZD3KUDEr2zJJ1j3Gjua9SVstONTLY1xhrcL7zPgJLo2ZtKcy5gZYYNIpnjido/pub?w=1078&amp;h=1023">
+    </body>
+</html>
