@@ -12,8 +12,28 @@
         <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <style>
+            html {
+                height: 100%;
+                box-sizing: border-box;
+            }
             body { 
                 background: rgb(240, 240, 240);
+                position: relative;
+                margin: 0;
+                padding-bottom: 90px;
+                min-height: 100%;
+            }
+            .container {
+                margin: 0 auto;
+                padding-top: 60px;
+                max-width: 600px;
+                width: calc(100% - 20px);
+                margin-left: 10px;
+            }
+            *,
+            *:before,
+            *:after {
+                box-sizing: inherit;
             }
             #day1 {
                 width: 100%;
@@ -42,14 +62,13 @@
             #navbar {
                 z-index: 1;
                 list-style-type: none;
-                margin: 0;
                 padding: 0;
                 overflow: hidden;
                 background-color: rgb(177, 190, 224);
                 position: fixed;
                 width: 101%;
-                margin-top: -10px;
-                margin-left: -10px;
+                margin-top: -2px;
+                margin-left: -1px;
                 box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
             }
             #navbar li {
@@ -67,9 +86,6 @@
                 text-decoration: none;
                 font-size: 25px;
                 font-family: "Teko", sans-serif;
-            }
-            #buffer {
-                height: 50px;
             }
             #live {
                 background-color: rgb(0, 95, 189);
@@ -117,12 +133,13 @@
                 color: black;
             }
             #footer {
-                margin-left: -8px;
-                margin-right: -8px;
+                position: absolute;
                 padding: 20px;
                 padding-top: 10px;
+                width: 100%;
                 background-color: rgb(35, 65, 102);
                 font-family: "Roboto", sans-serif;
+                bottom: 0;
             }
             .footertext {
                 margin: auto;
@@ -152,12 +169,14 @@
             <li class="select" id="future"><a href="/snowday/future"><b>FUTURE</b></a></li>
             <li class="select" id="past"><a href="/snowday/past"><b>PAST</b></a></li>
         </ul>
-        <div id="buffer"></div>
-        <img id="day1" src="https://docs.google.com/drawings/d/e/2PACX-1vSehM4Lclml6dAeFwmBOMFE1qHB8Y7ketkgGpFlWpmA2ZkU-yYCS-GZC4oENmhpmfxKhG50GgfIb_DW/pub?w=1078&amp;h=1023">
-        <!--
-        <img id="day2" src="https://docs.google.com/drawings/d/e/2PACX-1vTLt6YzOaDRtuGLfjFWuZ2YqXO0w7g37rvd0i-rBeJykDXjEqJ42TADpPs5wXvbF5XuBgSwcccN062h/pub?w=1078&amp;h=1023">
-        <img id="day3" src="https://docs.google.com/drawings/d/e/2PACX-1vTUOaesNfaYF53Qsi0ZD3KUDEr2zJJ1j3Gjua9SVstONTLY1xhrcL7zPgJLo2ZtKcy5gZYYNIpnjido/pub?w=1078&amp;h=1023"> 
-        -->
+        <div class="container">
+            <div id="buffer"></div>
+            <img id="day1" src="https://docs.google.com/drawings/d/e/2PACX-1vSehM4Lclml6dAeFwmBOMFE1qHB8Y7ketkgGpFlWpmA2ZkU-yYCS-GZC4oENmhpmfxKhG50GgfIb_DW/pub?w=1078&amp;h=1023">
+            <!--
+            <img id="day2" src="https://docs.google.com/drawings/d/e/2PACX-1vTLt6YzOaDRtuGLfjFWuZ2YqXO0w7g37rvd0i-rBeJykDXjEqJ42TADpPs5wXvbF5XuBgSwcccN062h/pub?w=1078&amp;h=1023">
+            <img id="day3" src="https://docs.google.com/drawings/d/e/2PACX-1vTUOaesNfaYF53Qsi0ZD3KUDEr2zJJ1j3Gjua9SVstONTLY1xhrcL7zPgJLo2ZtKcy5gZYYNIpnjido/pub?w=1078&amp;h=1023"> 
+            -->
+        </div>
         <div id="footer">
             <p class="footertext"><b>© 2018 Josh Chang</b></p>
             <p class="footertext"><b>Contact: <a id="footerlink" href="mailto:joshchang04@gmail.com?Subject=Snow%20Day%20Prediction%20Site"> joshchang04@gmail.com</a></b></p>
