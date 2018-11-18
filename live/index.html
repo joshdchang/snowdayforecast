@@ -159,6 +159,35 @@
                 font-family: "Roboto", sans-serif;
                 color: rgb(255, 255, 255);
             }
+            <script>
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                p = 'AM';
+                if(h > 12){
+                    h = h - 12;
+                    p = 'PM';
+                }
+                if(h == 12){
+                    p = 'PM';
+                }
+                if(h == 0){
+                    h = 12;
+                    p = 'AM';
+                }
+                // add a zero in front of numbers<10
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('stamp').innerHTML = 'Last Refresh: ' + h + ":" + m + ' ' + p;
+            }
+        </script>
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129270386-1"></script>
@@ -189,35 +218,5 @@
             <p class="footertext"><b>© 2018 Josh Chang</b></p>
             <p class="footertext"><b><a id="footerlink" href="https://docs.google.com/forms/d/e/1FAIpQLSe0k8McOni_sh3LviaO0pacG9Dkp7UaX8aOo7Wq2JDAPv1QSg/viewform">Contact Me</a></b></p>
         </div>
-        <script>
-            function checkTime(i) {
-                if (i < 10) {
-                    i = "0" + i;
-                }
-                return i;
-            }
-            function startTime() {
-                var today = new Date();
-                var h = today.getHours();
-                var m = today.getMinutes();
-                p = 'AM';
-                if(h > 12){
-                    h = h - 12;
-                    p = 'PM';
-                }
-                if(h == 12){
-                    p = 'PM';
-                }
-                if(h == 0){
-                    h = 12;
-                    p = 'AM';
-                }
-                // add a zero in front of numbers<10
-                m = checkTime(m);
-                s = checkTime(s);
-                document.getElementById('stamp').innerHTML = 'Last Refresh: ' + h + ":" + m + ' ' + p;
-            }
-            startTime();
-        </script>
     </body>
 </html>
