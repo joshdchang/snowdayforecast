@@ -12,6 +12,8 @@
         <meta name="description" content="Live Updates - Josh Chang's official snow day and 2-hour delay predictions for the Irvington Union Free School District (New York).">
         <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT">
         <meta http-equiv="refresh" content="60"/>
         <style>
             html {
@@ -178,7 +180,7 @@
             <li class="select" id="future"><a href="/snowday/future"><b>FUTURE</b></a></li>
             <li class="select" id="past"><a href="/snowday/past"><b>PAST</b></a></li>
         </ul>
-        <a href='/snowday/live/'>
+        <a href='/snowday/live/' id="reloadLink">
             <div id="time">
                 <p><b id="stamp"></b></p>
             </div>
@@ -221,6 +223,14 @@
                 // add a zero in front of numbers<10
                 m = checkTime(m);
                 document.getElementById('stamp').innerHTML = 'Last Refresh: ' + h + ":" + m + ' ' + p;
+            }
+        </script>
+        <script>
+            window.onload = function() {
+                var a = document.getElementById("reloadLink");
+                a.onclick = function() {
+                    
+                }
             }
         </script>
     </body>
