@@ -69,7 +69,7 @@
                 padding-right: 13px;
                 padding-bottom: 3px;
                 text-decoration: none;
-                font-size: 150%;
+                font-size: 24px;
                 font-family: "Teko", sans-serif;
             }
             #live {
@@ -132,13 +132,32 @@
                 margin-left: 5px;
                 margin-top: 5px;
                 color: white;
-                font-size: 90%;
+                font-size: 15px;
             }
             .footertext a {
                 color: rgb(196, 215, 255);
             }
             .footertext a:hover {
                 color: rgb(224, 234, 255);
+            }
+            #time {
+                position: fixed;
+                right: 0;
+                margin-top: 43px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 20px;
+                background-color: rgb(245, 95, 103);
+                border-radius: 0px 0px 10px 10px;
+                box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+                z-index: 0;
+            }
+            #time p {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 12px;
+                font-family: "Roboto", sans-serif;
+                color: rgb(255, 255, 255);
             }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -156,6 +175,9 @@
             <li class="select" id="future"><a href="/snowday/future"><b>FUTURE</b></a></li>
             <li class="select" id="past"><a href="/snowday/past"><b>PAST</b></a></li>
         </ul>
+        <div id="time">
+            <p><b id="stamp"></b></p>
+        </div>
         <div class="container">
             <img src="https://docs.google.com/drawings/d/e/2PACX-1vSehM4Lclml6dAeFwmBOMFE1qHB8Y7ketkgGpFlWpmA2ZkU-yYCS-GZC4oENmhpmfxKhG50GgfIb_DW/pub?w=1078&amp;h=1023">
             <!--
@@ -167,5 +189,35 @@
             <p class="footertext"><b>© 2018 Josh Chang</b></p>
             <p class="footertext"><b><a id="footerlink" href="https://docs.google.com/forms/d/e/1FAIpQLSe0k8McOni_sh3LviaO0pacG9Dkp7UaX8aOo7Wq2JDAPv1QSg/viewform">Contact Me</a></b></p>
         </div>
+        <script>
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                p = 'AM';
+                if(h > 12){
+                    h = h - 12;
+                    p = 'PM';
+                }
+                if(h == 12){
+                    p = 'PM';
+                }
+                if(h == 0){
+                    h = 12;
+                    p = 'AM';
+                }
+                // add a zero in front of numbers<10
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('stamp').innerHTML = 'Last Refresh: ' + h + ":" + m + ' ' + p;
+            }
+            startTime();
+        </script>
     </body>
 </html>
