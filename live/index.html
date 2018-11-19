@@ -254,7 +254,7 @@
             }
             function startTime() {
                 var mobile = checkCookie('mobile');
-                if(mobile == 0){
+                if(mobile == 'yes'){
                     var element = document.getElementById('mobile');
                     element.parentNode.removeChild(element);
                     var container = document.getElementById('container');
@@ -286,7 +286,7 @@
                 element.parentNode.removeChild(element);
                 var container = document.getElementById('container');
                 container.style.paddingTop = '55px';
-                document.cookie = "mobile=0";
+                document.cookie = "mobile=yes";
             }
         </script>
     </body>
