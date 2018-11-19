@@ -259,9 +259,9 @@
                 var mobile = getCookie('mobile');
                 if(mobile !== 'yes'){
                     var element = document.getElementById('mobile');
-                    element.parentNode.removeChild(element);
                     var container = document.getElementById('container');
-                    var h = document.getElementById('mobile').offsetHeight;
+                    var h = element.clientHeight;
+                    element.style.visibility = 'visible';
                     container.style.paddingTop = (55 + h) + 'px';
                 }
                 var today = new Date();
