@@ -12,6 +12,8 @@
         <meta name="description" content="Live Updates - Josh Chang's official snow day and 2-hour delay predictions for the Irvington Union Free School District (New York).">
         <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <meta http-equiv="refresh" content="60"/>
         <style>
             html {
@@ -25,9 +27,9 @@
                 padding-bottom: 65px;
                 min-height: 100%;
             }
-            .container {
+            #container {
                 margin: 0 auto;
-                padding-top: 55px;
+                padding-top: 120px;
                 max-width: 600px;
                 width: calc(100% - 20px);
             }
@@ -140,6 +142,32 @@
             .footertext a:hover {
                 color: rgb(224, 234, 255);
             }
+            #mobile {
+                font-family: "Roboto", sans-serif;
+                position: fixed;
+                top: 28px;
+                padding: 15px;
+                width: 100%;
+                padding-right: 55px;
+                color: black;
+                font-size: 15px;
+                background-color: white;
+                z-index: 2;
+                box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            }
+            #mobile a {
+                color: rgb(53, 120, 252);
+            }
+            #mobile a:hover {
+                color: rgb(122, 166, 255);
+            }
+            #x {
+                position: absolute;
+                z-index: 2;
+                right: 12px;
+                top: 12px;
+                color: grey;
+            }
             #time {
                 position: fixed;
                 right: 0;
@@ -183,7 +211,9 @@
                 <p><b id="stamp"></b></p>
             </div>
         </a>
-        <div class="container">
+        <p id='mobile'><b>On Mobile? Consider adding this site to your Home Screen for easy access. <a href=''>Learn How</a></b><a id='xlink' href='' onclick="removeBar()"><span id="x"><i class="material-icons">clear</i></span></a></p>
+        <div id="container">
+            
             <img src="https://docs.google.com/drawings/d/e/2PACX-1vSehM4Lclml6dAeFwmBOMFE1qHB8Y7ketkgGpFlWpmA2ZkU-yYCS-GZC4oENmhpmfxKhG50GgfIb_DW/pub?w=1078&amp;h=1023">
             <!--
             <img src="https://docs.google.com/drawings/d/e/2PACX-1vTLt6YzOaDRtuGLfjFWuZ2YqXO0w7g37rvd0i-rBeJykDXjEqJ42TADpPs5wXvbF5XuBgSwcccN062h/pub?w=1078&amp;h=1023">
@@ -192,9 +222,24 @@
         </div>
         <div id="footer">
             <p class="footertext"><b>© 2018 Josh Chang</b></p>
-            <p class="footertext"><b><a id="footerlink" href="https://docs.google.com/forms/d/e/1FAIpQLSe0k8McOni_sh3LviaO0pacG9Dkp7UaX8aOo7Wq2JDAPv1QSg/viewform">Contact Me</a></b></p>
+            <p class="footertext"><b><a href="https://docs.google.com/forms/d/e/1FAIpQLSe0k8McOni_sh3LviaO0pacG9Dkp7UaX8aOo7Wq2JDAPv1QSg/viewform">Contact Me</a></b></p>
         </div>
         <script>
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
             document.getElementById("body").onload = function() {startTime()};
             function checkTime(i) {
                 if (i < 10) {
@@ -203,6 +248,9 @@
                 return i;
             }
             function startTime() {
+                if(document.getCookie('mobile') == '0'){
+                    removeBar();
+                }
                 var today = new Date();
                 var h = today.getHours();
                 var m = today.getMinutes();
@@ -221,6 +269,15 @@
                 // add a zero in front of numbers<10
                 m = checkTime(m);
                 document.getElementById('stamp').innerHTML = 'Last Refresh: ' + h + ":" + m + ' ' + p;
+            }
+        </script>
+        <script>
+            function removeBar() {
+                var element = document.getElementById('mobile');
+                element.parentNode.removeChild(element);
+                var container = document.getElementById('container');
+                container.style.paddingTop = '65px';
+                document.cookie = "mobile=0";
             }
         </script>
     </body>
