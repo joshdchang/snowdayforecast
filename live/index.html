@@ -225,6 +225,28 @@
             <p class="footertext"><b><a href="https://docs.google.com/forms/d/e/1FAIpQLSe0k8McOni_sh3LviaO0pacG9Dkp7UaX8aOo7Wq2JDAPv1QSg/viewform">Contact Me</a></b></p>
         </div>
         <script>
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires="+d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for(var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
             document.getElementById("body").onload = function() {startTime()};
             function checkTime(i) {
                 if (i < 10) {
@@ -233,11 +255,12 @@
                 return i;
             }
             function startTime() {
-                if(document.cookie == 'mobile=0'){
+                var mobile = checkCookie('mobile');
+                if(mobile == 0){
                     var element = document.getElementById('mobile');
                     element.parentNode.removeChild(element);
                     var container = document.getElementById('container');
-                    container.style.paddingTop = '65px';
+                    container.style.paddingTop = '55px';
                 }
                 var today = new Date();
                 var h = today.getHours();
@@ -264,7 +287,7 @@
                 var element = document.getElementById('mobile');
                 element.parentNode.removeChild(element);
                 var container = document.getElementById('container');
-                container.style.paddingTop = '65px';
+                container.style.paddingTop = '55px';
                 document.cookie = "mobile=0";
             }
         </script>
