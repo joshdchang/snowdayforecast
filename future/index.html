@@ -233,6 +233,16 @@
                 container.style.paddingTop = '55px';
                 setCookie('mobile', 'yes', 3);
             }
+            window.addEventListener("orientationchange", function() {
+                var mobile = getCookie('mobile');
+                if(mobile !== 'yes'){
+                    var element = document.getElementById('mobile');
+                    var container = document.getElementById('container');
+                    var h = element.clientHeight;
+                    element.style.visibility = 'visible';
+                    container.style.paddingTop = (55 + h) + 'px';
+                }
+            });
         </script>
     </body>
 </html>
