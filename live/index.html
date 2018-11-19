@@ -29,7 +29,7 @@
             }
             #container {
                 margin: 0 auto;
-                padding-top: 120px;
+                padding-top: 55px;
                 max-width: 600px;
                 width: calc(100% - 20px);
             }
@@ -154,6 +154,7 @@
                 background-color: white;
                 z-index: 2;
                 box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+                visibility: hidden;
             }
             #mobile a {
                 color: rgb(53, 120, 252);
@@ -256,11 +257,12 @@
             }
             function startTime() {
                 var mobile = getCookie('mobile');
-                if(mobile == 'yes'){
+                if(mobile !== 'yes'){
                     var element = document.getElementById('mobile');
                     element.parentNode.removeChild(element);
                     var container = document.getElementById('container');
-                    container.style.paddingTop = '55px';
+                    var h = document.getElementById('mobile').offsetHeight;
+                    container.style.paddingTop = (55 + h) + 'px';
                 }
                 var today = new Date();
                 var h = today.getHours();
