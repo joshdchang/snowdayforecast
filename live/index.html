@@ -259,8 +259,10 @@
                 if(mobile !== 'yes'){
                     var element = document.getElementById('mobile');
                     var container = document.getElementById('container');
+                    var time = document.getElementById('time');
                     var h = element.clientHeight;
                     element.style.visibility = 'visible';
+                    time.style.marginTop = (43 + h) + 'px';
                     container.style.paddingTop = (55 + h) + 'px';
                 }
                 var today = new Date();
@@ -288,6 +290,8 @@
                 var element = document.getElementById('mobile');
                 element.parentNode.removeChild(element);
                 var container = document.getElementById('container');
+                var time = document.getElementById('time');
+                time.style.marginTop = '43px';
                 container.style.paddingTop = '55px';
                 setCookie('mobile', 'yes', 3);
             }
