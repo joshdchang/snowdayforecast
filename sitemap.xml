@@ -8,15 +8,15 @@
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://joshdchang.github.io/snowday/past</loc>
+		<loc>https://joshdchang.github.io/snowday/past/</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://joshdchang.github.io/snowday/live</loc>
+		<loc>https://joshdchang.github.io/snowday/live/</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://joshdchang.github.io/snowday/future</loc>
+		<loc>https://joshdchang.github.io/snowday/future/</loc>
 		<changefreq>daily</changefreq>
 	</url>
 </urlset>
