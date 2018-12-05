@@ -7,8 +7,8 @@
 			var rows = [];
             function doData(json) {
                 spData = json.feed.entry;
-                for(var i = 1; i < 11; i++){
-                    rows[i] = [parseInt(spData[i * 4].gs$cell.$t), spData[i * 4 + 1].gs$cell.$t, spData[i * 4 + 2].gs$cell.$t, spData[i * 4 + 3].gs$cell.$t];
+                for(var i = 0; i < 10; i++){
+                    rows[i] = [spData[i * 3].gs$cell.$t, spData[i * 3 + 1].gs$cell.$t, spData[i * 3 + 2].gs$cell.$t];
                 }
                 console.log(rows);
             }
