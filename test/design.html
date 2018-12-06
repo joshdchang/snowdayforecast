@@ -59,6 +59,7 @@
             }
             #navbar li {
                 float: left;
+                visibility: visible;
             }
             #navbar li a {
                 display: block;
@@ -222,6 +223,10 @@
                     var h = element.clientHeight;
                     element.style.visibility = 'visible';
                     container.style.paddingTop = (55 + h) + 'px';
+                }
+                if(screen.width < 500){
+                    var navbar = document.getElementById('navbar');
+                    navbar.style.visibility = 'hidden';
                 }
             }
         </script>
