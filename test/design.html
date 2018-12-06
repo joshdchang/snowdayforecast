@@ -20,6 +20,11 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129270386-1"></script>
         <script>
+            import {MDCTopAppBar} from '@material/top-app-bar/index';
+
+// Instantiation
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
