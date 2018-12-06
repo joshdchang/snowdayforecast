@@ -49,12 +49,13 @@
                 z-index: 1;
                 list-style-type: none;
                 padding: 0;
+                margin-right: 171px;
                 overflow: hidden;
                 background-color: rgb(177, 190, 224);
                 position: fixed;
-                width: 101%;
+                width: 100%;
                 margin-top: -2px;
-                margin-left: -1px;
+                margin-left: 0px;
                 box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
             }
             #navbar li {
@@ -88,6 +89,23 @@
             #live a:hover {
                 background-color: rgb(255, 255, 255);
                 color: black;
+            }
+            #menu {
+                background-color: #0D47A1;
+                float: right;
+                color: rgb(255, 255, 255);
+                transition:.2s;
+                font-size: 0px;
+                padding: 0;
+                width: 0px;
+            }
+            #menu:hover {
+                background-color: rgb(255, 255, 255);
+                color: black;
+                -o-transition:.2s;
+                -ms-transition:.2s;
+                -moz-transition:.2s;
+                -webkit-transition:.2s;
             }
             #future {
                 background-color: rgb(87, 131, 207);
@@ -169,6 +187,22 @@
             .footertext a:hover {
                 color: rgb(224, 234, 255);
             }
+            #title {
+                display: block;
+                display: -webkit-block;
+                text-align: -webkit-center -webkit-center;
+                text-align: center center;
+                float: left;
+                color: rgb(255, 255, 255);
+                transition:.2s;
+                margin: auto;
+                padding: 0px;
+                width: 0px;
+                visibility: hidden;
+                font-family: "Roboto", sans-serif;
+                font-size: 24px;
+                height: 0px;
+            }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129270386-1"></script>
@@ -184,6 +218,8 @@
             <li class="select" id="live"><a href="/snowday/live"><b>LIVE UPDATES</b></a></li>
             <li class="select" id="future"><a href="/snowday/future"><b>FUTURE OUTLOOK</b></a></li>
             <li class="select" id="past"><a href="/snowday/past"><b>PAST DATA</b></a></li>
+            <p id='title'><b>Future Outlook</b></p>
+            <a href='' id='menu'><i class="material-icons">menu</i></a>
         </ul>
         <p id='mobile'><b>On Mobile? Consider adding this site to your Home Screen for easy access. <a href='/snowday/homescreen'>Learn How</a></b><a id='xlink' href='' onclick="removeBar()"><span id="x"><i class="material-icons">clear</i></span></a></p>
         <div id="container">
@@ -224,9 +260,27 @@
                     element.style.visibility = 'visible';
                     container.style.paddingTop = (55 + h) + 'px';
                 }
-                if(screen.width < 500){
+                if(screen.width < 620){
+                    var live = document.getElementById("live");
+                    live.parentNode.removeChild(live);
+                    var past = document.getElementById("past");
+                    past.parentNode.removeChild(past);
+                    var future = document.getElementById('future');
+                    future.parentNode.removeChild(future);
                     var navbar = document.getElementById('navbar');
-                    navbar.style.visibility = 'hidden';
+                    navbar.style.backgroundColor = '#2196F3';
+                    var menu = document.getElementById('menu');
+                    menu.style.paddingTop = '10px';
+                    menu.style.paddingLeft = '10px';
+                    menu.style.paddingRight = '9px';
+                    menu.style.paddingBottom = '10px';
+                    menu.style.width = 'auto';
+                    var title = document.getElementById('title');
+                    title.style.padding = 'auto';
+                    title.style.paddingTop = '9px';
+                    title.style.paddingLeft = '12px';
+                    title.style.width = 'auto';
+                    title.style.visibility = 'visible';
                 }
             }
         </script>
@@ -253,3 +307,4 @@
         </script>
     </body>
 </html>
+
