@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-		
 		<style>
 			:root {
 				--mdc-theme-primary: #3f51b5;
@@ -42,17 +41,20 @@
 				--mdc-theme-text-disabled-on-dark: hsla(0,0%,100%,.5);
 				--mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
 			}
-			.mdc-top-app-bar {
+			.mdc-top-app-bar--fixed {
 				margin-left: -8px;
 				margin-top: -8px;
 				position: fixed;
-				display: block;
+				background-color: #1976d2;
 				width: 100%;
+				color: white;
 			}
-			.mdc-component__toolbar .app-bar {
+			.mdc-top-app-bar__row {
+				margin-top: 20px;
+			}
+			.app-bar {
 				background-color: #004a9f;
 				height: 20px;
-				display: block;
 				width: 100%;
 				position: fixed;
 			}
@@ -60,24 +62,20 @@
 	</head>
 	<body>
 		<!-- Render textfield component -->
-		<section class="app-bar"></section>
-		<header class="mdc-top-app-bar">
+		<header class="mdc-top-app-bar--fixed">
+			<section class="app-bar"></section>
 			<div class="mdc-top-app-bar__row">
 				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-					<a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
-					<span class="mdc-top-app-bar__title">Title</span>
+					<a href="#" class="material-icons mdc-top-app-bar__navigation-icon" class="mdc-ripple-upgraded">menu</a>
+					<span class="mdc-top-app-bar__title">Future Outlook</span>
 				</section>
 				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-					<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download" alt="Download">file_download</a>
-					<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Print this page" alt="Print this page">print</a>
-					<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+					<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Refresh this page" alt="Refresh this page" class="mdc-ripple-upgraded">refresh</a>
 				</section>
 			</div>
 		</header>
-		
-		<!-- Instantiate single textfield component rendered in the document -->
 		<script>
-			mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar--fixed'));
+			mdc.fixedTopAppBarFoundation.MDCFixedTopAppBarFoundation.attachTo(document.querySelector('.mdc-top-app-bar--fixed'));
 		</script>
 	</body>
 </html>
