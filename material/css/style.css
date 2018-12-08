@@ -29,6 +29,11 @@
 	--mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
 }
 .mdc-top-app-bar {
-    left: 0px;
-    top: 0px;
+	left: 0px;
+	top: 0px;
+}
+.mdc-top-app-bar--fixed-adjust {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5px;
 }
