@@ -1,0 +1,38 @@
+ :root {
+				--mdc-theme-primary: #1976d2;
+				--mdc-theme-accent: #ff4081;
+				--mdc-theme-background: #fff;
+				--mdc-theme-text-primary-on-primary: #fff;
+				--mdc-theme-text-secondary-on-primary: hsla(0,0%,100%,.7);
+				--mdc-theme-text-hint-on-primary: hsla(0,0%,100%,.5);
+				--mdc-theme-text-disabled-on-primary: hsla(0,0%,100%,.5);
+				--mdc-theme-text-icon-on-primary: hsla(0,0%,100%,.5);
+				--mdc-theme-text-primary-on-accent: #fff;
+				--mdc-theme-text-secondary-on-accent: hsla(0,0%,100%,.7);
+				--mdc-theme-text-hint-on-accent: hsla(0,0%,100%,.5);
+				--mdc-theme-text-disabled-on-accent: hsla(0,0%,100%,.5);
+				--mdc-theme-text-icon-on-accent: hsla(0,0%,100%,.5);
+				--mdc-theme-text-primary-on-background: rgba(0,0,0,.87);
+				--mdc-theme-text-secondary-on-background: rgba(0,0,0,.54);
+				--mdc-theme-text-hint-on-background: rgba(0,0,0,.38);
+				--mdc-theme-text-disabled-on-background: rgba(0,0,0,.38);
+				--mdc-theme-text-icon-on-background: rgba(0,0,0,.38);
+				--mdc-theme-text-primary-on-light: rgba(0,0,0,.87);
+				--mdc-theme-text-secondary-on-light: rgba(0,0,0,.54);
+				--mdc-theme-text-hint-on-light: rgba(0,0,0,.38);
+				--mdc-theme-text-disabled-on-light: rgba(0,0,0,.38);
+				--mdc-theme-text-icon-on-light: rgba(0,0,0,.38);
+				--mdc-theme-text-primary-on-dark: #fff;
+				--mdc-theme-text-secondary-on-dark: hsla(0,0%,100%,.7);
+				--mdc-theme-text-hint-on-dark: hsla(0,0%,100%,.5);
+				--mdc-theme-text-disabled-on-dark: hsla(0,0%,100%,.5);
+				--mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
+			}
+.mdc-top-app-bar {
+				background-color: #1976d2;
+				width: 100%;
+        z-index: 1;
+        display: flex;
+        margin-left: -8px;
+        margin-top: -8px;
+			}
