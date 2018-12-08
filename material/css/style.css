@@ -1,8 +1,8 @@
 :root {
-	--mdc-theme-primary: #1976d2;
-	--mdc-theme-accent: #ff4081;
-	--mdc-theme-background: #fff;
-	--mdc-theme-text-primary-on-primary: #fff;
+	--mdc-theme-primary: #c51162;
+	--mdc-theme-accent: #8e0038;
+	--mdc-theme-background: white;
+	--mdc-theme-text-primary-on-primary: white;
 	--mdc-theme-text-secondary-on-primary: hsla(0,0%,100%,.7);
 	--mdc-theme-text-hint-on-primary: hsla(0,0%,100%,.5);
 	--mdc-theme-text-disabled-on-primary: hsla(0,0%,100%,.5);
