@@ -1,55 +1,40 @@
- :root {
-				--mdc-theme-primary: white;
-				--mdc-theme-accent: #ff4081;
-				--mdc-theme-background: #fff;
-				--mdc-theme-text-primary-on-primary: #fff;
-				--mdc-theme-text-secondary-on-primary: hsla(0,0%,100%,.7);
-				--mdc-theme-text-hint-on-primary: hsla(0,0%,100%,.5);
-				--mdc-theme-text-disabled-on-primary: hsla(0,0%,100%,.5);
-				--mdc-theme-text-icon-on-primary: hsla(0,0%,100%,.5);
-				--mdc-theme-text-primary-on-accent: #fff;
-				--mdc-theme-text-secondary-on-accent: hsla(0,0%,100%,.7);
-				--mdc-theme-text-hint-on-accent: hsla(0,0%,100%,.5);
-				--mdc-theme-text-disabled-on-accent: hsla(0,0%,100%,.5);
-				--mdc-theme-text-icon-on-accent: hsla(0,0%,100%,.5);
-				--mdc-theme-text-primary-on-background: rgba(0,0,0,.87);
-				--mdc-theme-text-secondary-on-background: rgba(0,0,0,.54);
-				--mdc-theme-text-hint-on-background: rgba(0,0,0,.38);
-				--mdc-theme-text-disabled-on-background: rgba(0,0,0,.38);
-				--mdc-theme-text-icon-on-background: rgba(0,0,0,.38);
-				--mdc-theme-text-primary-on-light: rgba(0,0,0,.87);
-				--mdc-theme-text-secondary-on-light: rgba(0,0,0,.54);
-				--mdc-theme-text-hint-on-light: rgba(0,0,0,.38);
-				--mdc-theme-text-disabled-on-light: rgba(0,0,0,.38);
-				--mdc-theme-text-icon-on-light: rgba(0,0,0,.38);
-				--mdc-theme-text-primary-on-dark: #fff;
-				--mdc-theme-text-secondary-on-dark: hsla(0,0%,100%,.7);
-				--mdc-theme-text-hint-on-dark: hsla(0,0%,100%,.5);
-				--mdc-theme-text-disabled-on-dark: hsla(0,0%,100%,.5);
-				--mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
-			}
+:root {
+	--mdc-theme-primary: #1976d2;
+	--mdc-theme-accent: #ff4081;
+	--mdc-theme-background: #fff;
+	--mdc-theme-text-primary-on-primary: #fff;
+	--mdc-theme-text-secondary-on-primary: hsla(0,0%,100%,.7);
+	--mdc-theme-text-hint-on-primary: hsla(0,0%,100%,.5);
+	--mdc-theme-text-disabled-on-primary: hsla(0,0%,100%,.5);
+	--mdc-theme-text-icon-on-primary: hsla(0,0%,100%,.5);
+	--mdc-theme-text-primary-on-accent: #fff;
+	--mdc-theme-text-secondary-on-accent: hsla(0,0%,100%,.7);
+	--mdc-theme-text-hint-on-accent: hsla(0,0%,100%,.5);
+	--mdc-theme-text-disabled-on-accent: hsla(0,0%,100%,.5);
+	--mdc-theme-text-icon-on-accent: hsla(0,0%,100%,.5);
+	--mdc-theme-text-primary-on-background: rgba(0,0,0,.87);
+	--mdc-theme-text-secondary-on-background: rgba(0,0,0,.54);
+	--mdc-theme-text-hint-on-background: rgba(0,0,0,.38);
+	--mdc-theme-text-disabled-on-background: rgba(0,0,0,.38);
+	--mdc-theme-text-icon-on-background: rgba(0,0,0,.38);
+	--mdc-theme-text-primary-on-light: rgba(0,0,0,.87);
+	--mdc-theme-text-secondary-on-light: rgba(0,0,0,.54);
+	--mdc-theme-text-hint-on-light: rgba(0,0,0,.38);
+	--mdc-theme-text-disabled-on-light: rgba(0,0,0,.38);
+	--mdc-theme-text-icon-on-light: rgba(0,0,0,.38);
+	--mdc-theme-text-primary-on-dark: #fff;
+	--mdc-theme-text-secondary-on-dark: hsla(0,0%,100%,.7);
+	--mdc-theme-text-hint-on-dark: hsla(0,0%,100%,.5);
+	--mdc-theme-text-disabled-on-dark: hsla(0,0%,100%,.5);
+	--mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
+}
 .mdc-top-app-bar {
-				position: fixed;
-				background-color: #1976d2;
-				width: 100%;
-				color: white;
-        z-index: 1;
-        box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-        display: flex;
-        margin-left: -8px;
-			}
-.mdc-top-app-bar__row {
-				margin-top: 12px;
-			}
-.app-bar {
-				background-color: #004a9f;
-				height: 20px;
-				width: 100%;
-				position: fixed;
-        z-index: 2;
-        margin-top: -8px;
-        margin-left: -8px;
-			}
-.material-icons {
-  color: white;
+	position: fixed;
+	background-color: #1976d2;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+	display: flex;
+	margin-left: -8px;
+	margin-top: -8px;
 }
