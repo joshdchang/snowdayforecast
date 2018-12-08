@@ -28,6 +28,9 @@
 	--mdc-theme-text-disabled-on-dark: hsla(0,0%,100%,.5);
 	--mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
 }
+html {
+	font-family: "Roboto", sans-serif;
+}
 .mdc-top-app-bar {
 	left: 0px;
 	top: 0px;
