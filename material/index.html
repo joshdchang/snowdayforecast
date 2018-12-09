@@ -17,6 +17,18 @@
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
+		
+		<script> 
+			var spData = null;
+			var rows = [];
+			function doData(json) {
+				spData = json.feed.entry;
+				for(var i = 0; i < 10; i++){
+					rows[i] = [spData[i * 3].gs$cell.$t, spData[i * 3 + 1].gs$cell.$t, spData[i * 3 + 2].gs$cell.$t];
+				}
+			}
+		</script>
+		<script src="https://spreadsheets.google.com/feeds/cells/1ZQLygPgQTcZ4f8qJyRQlTn9e4n0PuSO3CYlxaKrBY1Y/1/public/values?alt=json-in-script&callback=doData"></script>
 	</head>
 	<body>
 		<header class="mdc-top-app-bar mdc-top-app-bar--fixed">
@@ -59,19 +71,9 @@
 			</div>
 		</header>
 		<div class="mdc-top-app-bar--fixed-adjust">
-			<p class="content">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare, nisi nec suscipit aliquam, mauris dolor faucibus eros, vel varius metus tellus sed sem. Sed quis lacus urna. Aliquam augue orci, iaculis id velit at, cursus pretium nibh. Pellentesque
-				velit nisi, interdum sit amet ornare sed, pellentesque vel dolor. Aenean elementum ac nulla et ultrices. In sit amet lobortis tellus. Morbi non odio in metus consequat eleifend. Nulla facilisi. Ut eu facilisis lacus. Morbi eu tortor nec odio egestas
-				rutrum. Nulla luctus fermentum urna, in rhoncus metus gravida non. Vestibulum vel vehicula lectus. Nullam scelerisque est tellus, lobortis tempor diam commodo at. Nulla quis sollicitudin dolor. Aenean nec nisl at arcu pellentesque fermentum. Fusce
-				id justo quis nunc maximus posuere. Suspendisse ut velit vel magna tincidunt ultrices at sed magna. Duis rutrum ut lorem ut faucibus. Suspendisse in nisi nec justo aliquam condimentum at non velit. Pellentesque et ornare risus. Vivamus nulla ante,
-				imperdiet a lorem a, dignissim porttitor enim. Nullam vitae ex at tellus faucibus volutpat. Mauris aliquet luctus purus. In a risus ex. Mauris id posuere nisi. Suspendisse facilisis nibh eget sem finibus lobortis. Nullam malesuada lacinia velit.
-				Phasellus quis laoreet justo, quis gravida odio. Vivamus dui velit, rutrum vel libero at, laoreet blandit mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque eu vulputate dui, ut tincidunt
-				justo. Vestibulum ut accumsan metus, vitae varius magna. Mauris ultricies sapien a leo iaculis efficitur. Nulla et posuere sapien. Vivamus pharetra sapien turpis, quis scelerisque enim aliquet in. Sed elementum egestas rhoncus. Lorem ipsum dolor
-				sit amet, consectetur adipiscing elit. Aenean massa metus, faucibus nec ligula non, suscipit pharetra elit. Nulla vel libero neque. Cras quis suscipit leo. Maecenas hendrerit finibus ultrices. Sed vel justo finibus, egestas nunc ut, lobortis arcu.
-				Duis hendrerit augue in erat vehicula, vitae maximus diam hendrerit. Duis ultrices bibendum nulla, ac vulputate quam vulputate et. Phasellus vulputate sodales elit. Ut placerat et lectus ut luctus. Sed bibendum rutrum commodo. Interdum et malesuada
-				fames ac ante ipsum primis in faucibus. Quisque suscipit risus ut iaculis bibendum. Donec imperdiet purus eu urna bibendum consequat. Nulla faucibus mauris vitae facilisis sollicitudin. Vestibulum ut lectus id mi aliquam fringilla nec ultrices
-				purus. Etiam leo est, vulputate sit amet ante eget, aliquet feugiat mi. Sed eget lorem vitae lorem dignissim pretium. Cras sit amet magna faucibus, lobortis risus vel, rhoncus purus. Vivamus quis vulputate magna.
-			</p>
+			<div class="content">
+				
+			</div>
 		</div>
 		<div id="alert-dialog" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-describedby="alert-dialog-description">
 			<div class="mdc-dialog__scrim"></div>
