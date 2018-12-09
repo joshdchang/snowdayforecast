@@ -12,3 +12,5 @@ var tabs = document.querySelectorAll('.mdc-tab-bar');
 for (var i = 0, tab; tab = tabs[i]; i++) {
 		mdc.tabBar.MDCTabBar.attachTo(tab);
 }
+
+document.addEventListener("touchstart", function(){}, true);
