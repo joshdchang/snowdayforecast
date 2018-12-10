@@ -1,3 +1,7 @@
+function warningOpening() {
+	document.getElementById("alert-dialog").className = "mdc-dialog mdc-dialog--opening";
+	setTimeout(warningOpen, 1);
+}
 function warningOpen() {
 	document.getElementById("alert-dialog").className = "mdc-dialog mdc-dialog--open";
 }
