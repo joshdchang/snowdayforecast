@@ -57,3 +57,17 @@ html {
 .content {
 	color: grey;
 }
+.mdc-dialog__scrim {
+	-o-transition: .16s;
+  -ms-transition: .16s;
+  -moz-transition: .16s;
+  -webkit-transition: .16s;
+  transition: .16s;
+}
+.mdc-dialog__container {
+	-o-transition: .16s;
+  -ms-transition: .16s;
+  -moz-transition: .16s;
+  -webkit-transition: .16s;
+  transition: .16s;
+}
