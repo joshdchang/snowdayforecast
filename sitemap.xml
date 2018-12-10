@@ -4,19 +4,7 @@
        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
-		<loc>https://joshdchang.github.io/snowday/</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://joshdchang.github.io/snowday/past/</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://joshdchang.github.io/snowday/live/</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://joshdchang.github.io/snowday/future/</loc>
+		<loc>https://snowdayforecast.com/</loc>
 		<changefreq>daily</changefreq>
 	</url>
 </urlset>
