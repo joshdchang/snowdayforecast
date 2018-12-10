@@ -55,7 +55,7 @@ html {
 	height: 48px;
 }
 .content {
-	color: grey;
+	color: #BDBDBD;
 }
 .mdc-dialog__scrim {
 	-o-transition: .16s;
