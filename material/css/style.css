@@ -29,18 +29,25 @@
     --mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
 }
 html {
-	font-family: "Roboto", sans-serif;
+	font-family: "Google Sans", "Roboto", sans-serif;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+.mdc-button {
+	font-family: "Google Sans", "Roboto", sans-serif;
+}
 .mdc-top-app-bar {
-    	left: 0px;
-    	top: 0px;
+	left: 0px;
+	top: 0px;
 }
 .mdc-top-app-bar__title {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 18px;
+	font-family: "Product Sans", "Roboto", sans-serif;
 	margin-left: -18px;
-	font-weight: 400;
+}
+.mdc-dialog__title {
+	font-family: "Google Sans", "Roboto", sans-serif;
+}
+.mdc-tab__text-label {
+	font-family: "Google Sans", "Roboto", sans-serif;
 }
 .mdc-top-app-bar--fixed-adjust {
 	padding-left: 20px;
@@ -61,15 +68,15 @@ html {
 }
 .mdc-dialog__scrim {
 	-o-transition: .16s;
-  -ms-transition: .16s;
-  -moz-transition: .16s;
-  -webkit-transition: .16s;
-  transition: .16s;
+	-ms-transition: .16s;
+	-moz-transition: .16s;
+	-webkit-transition: .16s;
+	transition: .16s;
 }
 .mdc-dialog__container {
 	-o-transition: .16s;
-  -ms-transition: .16s;
-  -moz-transition: .16s;
-  -webkit-transition: .16s;
-  transition: .16s;
+  	-ms-transition: .16s;
+  	-moz-transition: .16s;
+  	-webkit-transition: .16s;
+  	transition: .16s;
 }
