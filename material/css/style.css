@@ -49,6 +49,9 @@ html {
 .mdc-tab__text-label {
 	font-family: "Google Sans", "Roboto", sans-serif;
 }
+.mdc-dialog__content {
+	font-family: "Google Sans", "Roboto", sans-serif;
+}
 .mdc-top-app-bar--fixed-adjust {
 	padding-left: 20px;
 	padding-right: 20px;
