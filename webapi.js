@@ -13,7 +13,7 @@ var con = mysql.createConnection({
 });
 
 // Open server to respond to http requests by static site
-http.createServer(function (req, res) {
+var app = http.createServer(function (req, res) {
     
     // Parse url
     var q = url.parse(req.url, true);
@@ -31,4 +31,9 @@ http.createServer(function (req, res) {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.end(JSON.stringify(response));
     });
-}).listen(8080);
+})
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8080;
+}
+app.listen(port);
