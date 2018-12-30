@@ -31,7 +31,7 @@ var app = http.createServer(function (req, res) {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.end(JSON.stringify(response));
     });
-})
+});
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 8080;
