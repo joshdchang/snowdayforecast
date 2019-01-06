@@ -170,9 +170,11 @@ html {
 	text-align: right;
 	font-weight: 500;
 }
+#loading {
+	text-align: center;
+}
 .loading-image {
-	position: absolute;
-	width: 30%;
-	left: 35%;
-	top: 100px;
+	display: inline-block;
+	margin-top: 100px;
+	width: 100px;
 }
