@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>meter test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="https://joshdchang.github.io/snowday/favicon.png"/>
+<link rel="apple-touch-icon" href="https://joshdchang.github.io/snowday/favicon.png">
+<meta name="google-site-verification" content="-ypOjVw6descs20mnW17STm32JT_oUODTrBlNRXDiwg"/>
+<meta property="og:title" content="Future Outlook | Josh's Snow Day Prediction"/>
+        <meta property="og:image" content="https://docs.google.com/drawings/d/e/2PACX-1vRlOMOk72a4oIRImUrRv0qy8TcYTp33BhpKs8JcDZ9X5EjXP58fezCR0MJGjQmOYsR1eNwI46RN2lov/pub?w=1084&amp;h=1880"/>
+<meta name="description" content="Future Storm Outlook - Josh Chang's official snow day and 2-hour delay predictions for the Irvington Union Free School District (New York).">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Product+Sans:400,500,700" rel="stylesheet">
+<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
+  
+  <link rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  		<header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+    	<div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+					<a href='' class="material-icons mdc-top-app-bar__navigation-icon" onClick="changePage('dashboard')" title="Home">ac_unit</a>
+					<span class="mdc-top-app-bar__title">Snow Day Forecast</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+					<button class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onclick="warningOpening()" title="Weather alerts">warning</button>
+        </section>
+</div>
+			<div class="mdc-top-app-bar__row tab-bar">
+        <div class="mdc-tab-bar" role="tablist">
+					<div class="mdc-tab-scroller">
+						<div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
+							<div class="mdc-tab-scroller__scroll-content">
+								<button class="mdc-tab" id="tab1a" role="tab" aria-selected="true" onClick="changePage('dashboard')" title="Dashboard">
+									<span class="mdc-tab__content">
+										<span class="mdc-tab__text-label" id="live">Dashboard</span>
+									</span>
+									<span id="tab1b" class="mdc-tab-indicator">
+										<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+									</span>
+									<span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+								</button>
+								<button class="mdc-tab" id="tab2a" role="tab" aria-selected="false" onClick="changePage('daybyday')" title="Day-by-day">
+									<span class="mdc-tab__content">
+										<span class="mdc-tab__text-label" id="future">Day-by-day</span>
+									</span>
+									<span class="mdc-tab-indicator" id="tab2b">
+										<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+									</span>
+									<span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="mdc-top-app-bar--fixed-adjust">
+    	<div class="content">
+				<div id="loading" class="visible page">
+					<img src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966" class="loading-image"></img>
+				</div>
+				<div id="page404" class="hidden page">
+					<p id="notfoundtext">That page doesn't exist.</p>
+					<button class="mdc-button mdc-button--raised" onClick="changePage('dashboard')">Back to Dashboard</button>
+				</div>
+				<div id="dashboard" class="hidden page">
+					<p>Dashboard is under construction.</p>
+				</div>
+				<div id="daybyday" class="hidden page">
+					<div class="card-wrapper">
+						<div id='zipcode' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
+							<h2 class="card-title mdc-typography--headline6">10533</h2>
+							<a class="mdc-button mdc-card__action mdc-card__action--button">
+								<span class="mdc-button__label">Change zip code</span>
+								<i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
+							</a>
+						</div>
+						<div id='day1card' class="mdc-card mdc-elevation--z3">
+							<div class="card-content">
+								<div class="card-media">
+									<div class='myChart' id='day1chart'></div>
+								</div>
+								<h2 class="card-title mdc-typography--headline6">Loading...</h2>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+								<div class="stat-description percent-label">Cancellation chance:</div>
+								<div class="stat-number percent">--</div>
+								<div class="stat-description threat-label">Threat type:</div>
+								<div class="stat-number threat">--</div>
+								<div class="stat-description timing-label">Timing:</div>
+								<div class="stat-number timing">--</div>
+								<div class="stat-description confidence-label">Confidence:</div>
+								<div class="stat-number confidence">--</div>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+							</div>
+							<div class="mdc-card__actions">
+								<div class="mdc-card__action-buttons">
+									<button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats">More charts and stats</button>
+								</div>
+								<div class="mdc-card__action-icons">
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
+								</div>
+							</div>
+						</div>
+						<div id='day2card' class="mdc-card mdc-elevation--z3">
+							<div class="card-content">
+								<div class="card-media">
+									<div class='myChart' id='day2chart'></div>
+								</div>
+								<h2 class="card-title mdc-typography--headline6">Loading...</h2>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+								<div class="stat-description percent-label">Cancellation chance:</div>
+								<div class="stat-number percent">--</div>
+								<div class="stat-description threat-label">Threat type:</div>
+								<div class="stat-number threat">--</div>
+								<div class="stat-description timing-label">Timing:</div>
+								<div class="stat-number timing">--</div>
+								<div class="stat-description confidence-label">Confidence:</div>
+								<div class="stat-number confidence">--</div>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+							</div>
+							<div class="mdc-card__actions">
+								<div class="mdc-card__action-buttons">
+									<button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats">More charts and stats</button>
+								</div>
+								<div class="mdc-card__action-icons">
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
+								</div>
+							</div>
+						</div>
+						<div id='day3card' class="mdc-card mdc-elevation--z3">
+							<div class="card-content">
+								<div class="card-media">
+									<div class='myChart' id='day3chart'></div>
+								</div>
+								<h2 class="card-title mdc-typography--headline6">Loading...</h2>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+								<div class="stat-description percent-label">Cancellation chance:</div>
+								<div class="stat-number percent">--</div>
+								<div class="stat-description threat-label">Threat type:</div>
+								<div class="stat-number threat">--</div>
+								<div class="stat-description timing-label">Timing:</div>
+								<div class="stat-number timing">--</div>
+								<div class="stat-description confidence-label">Confidence:</div>
+								<div class="stat-number confidence">--</div>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+							</div>
+							<div class="mdc-card__actions">
+								<div class="mdc-card__action-buttons">
+									<button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats">More charts and stats</button>
+								</div>
+								<div class="mdc-card__action-icons">
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
+								</div>
+							</div>
+						</div>
+						<div id='day4card' class="mdc-card mdc-elevation--z3">
+							<div class="card-content">
+								<div class="card-media">
+									<div class='myChart' id='day4chart'></div>
+								</div>
+								<h2 class="card-title mdc-typography--headline6">Loading...</h2>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+								<div class="stat-description percent-label">Cancellation chance:</div>
+								<div class="stat-number percent">--</div>
+								<div class="stat-description threat-label">Threat type:</div>
+								<div class="stat-number threat">--</div>
+								<div class="stat-description timing-label">Timing:</div>
+								<div class="stat-number timing">--</div>
+								<div class="stat-description confidence-label">Confidence:</div>
+								<div class="stat-number confidence">--</div>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+							</div>
+							<div class="mdc-card__actions">
+								<div class="mdc-card__action-buttons">
+									<button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats">More charts and stats</button>
+								</div>
+								<div class="mdc-card__action-icons">
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
+								</div>
+							</div>
+						</div>
+						<div id='day5card' class="mdc-card mdc-elevation--z3">
+							<div class="card-content">
+								<div class="card-media">
+									<div class='myChart' id='day5chart'></div>
+								</div>
+								<h2 class="card-title mdc-typography--headline6">Loading...</h2>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+								<div class="stat-description percent-label">Cancellation chance:</div>
+								<div class="stat-number percent">--</div>
+								<div class="stat-description threat-label">Threat type:</div>
+								<div class="stat-number threat">--</div>
+								<div class="stat-description timing-label">Timing:</div>
+								<div class="stat-number timing">--</div>
+								<div class="stat-description confidence-label">Confidence:</div>
+								<div class="stat-number confidence">--</div>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+							</div>
+							<div class="mdc-card__actions">
+								<div class="mdc-card__action-buttons">
+									<button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats">More charts and stats</button>
+								</div>
+								<div class="mdc-card__action-icons">
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
+								</div>
+							</div>
+						</div>
+						<div id='day6card' class="mdc-card mdc-elevation--z3">
+							<div class="card-content">
+								<div class="card-media">
+									<div class='myChart' id='day6chart'></div>
+								</div>
+								<h2 class="card-title mdc-typography--headline6">Loading...</h2>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+								<div class="stat-description percent-label">Cancellation chance:</div>
+								<div class="stat-number percent">--</div>
+								<div class="stat-description threat-label">Threat type:</div>
+								<div class="stat-number threat">--</div>
+								<div class="stat-description timing-label">Timing:</div>
+								<div class="stat-number timing">--</div>
+								<div class="stat-description confidence-label">Confidence:</div>
+								<div class="stat-number confidence">--</div>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+							</div>
+							<div class="mdc-card__actions">
+								<div class="mdc-card__action-buttons">
+									<button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats">More charts and stats</button>
+								</div>
+								<div class="mdc-card__action-icons">
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
+								</div>
+							</div>
+						</div>
+						<div id='day7card' class="mdc-card mdc-elevation--z3">
+							<div class="card-content">
+								<div class="card-media">
+									<div class='myChart' id='day7chart'></div>
+								</div>
+								<h2 class="card-title mdc-typography--headline6">Loading...</h2>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+								<div class="stat-description percent-label">Cancellation chance:</div>
+								<div class="stat-number percent">--</div>
+								<div class="stat-description threat-label">Threat type:</div>
+								<div class="stat-number threat">--</div>
+								<div class="stat-description timing-label">Timing:</div>
+								<div class="stat-number timing">--</div>
+								<div class="stat-description confidence-label">Confidence:</div>
+								<div class="stat-number confidence">--</div>
+								<div class="horline-container"><div class="horizontal-line"></div></div>
+							</div>
+							<div class="mdc-card__actions">
+								<div class="mdc-card__action-buttons">
+									<button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats">More charts and stats</button>
+								</div>
+								<div class="mdc-card__action-icons">
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='footer'>
+						<div class='footer-bar'></div>
+						<p class="footer-text footer-header">HOW DOES THIS SITE WORK?</p>
+						<p class="footer-text"><a class='footer-link' onClick='changePage("methadology")'>Methodology</a></p>
+						<p class="footer-text"><a class='footer-link' onClick='changePage("data")'>Data</a></p>
+						<p class="footer-text"><a class='footer-link' onClick='changePage("contact")'>Contact Me</a></p>
+						<i class="footer-text copyright">(c) 2019 Josh Chang</i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="alert-dialog" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-describedby="alert-dialog-description">
+			<div class="mdc-dialog__scrim" onclick="warningClosing()"></div>
+			<div class="mdc-dialog__container">
+				<div class="mdc-dialog__surface">
+					<h2 class="mdc-dialog__title" id="my-dialog-title">No Active Alerts</h2>
+					<section id="alert-dialog-description" class="mdc-dialog__content"><p>There are no government weather alerts currently in effect.</p>
+					</section>
+					<footer class="mdc-dialog__actions">
+						<button type="button" class="mdc-button mdc-dialog__button mdc-ripple-upgraded" data-mdc-dialog-action="close" onclick="warningClosing()" title="Ok">Ok</button>
+					</footer>
+				</div>
+			</div>
+		</div>
+  <script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
