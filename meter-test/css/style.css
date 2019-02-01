@@ -32,6 +32,7 @@ html {
 	font-family: "Google Sans", "Roboto", sans-serif;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	background-color: #EEEEEE;
+	-webkit-text-size-adjust: 100%;
 }
 .mdc-button {
 	font-family: "Google Sans", "Roboto", sans-serif;
