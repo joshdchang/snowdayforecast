@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" >
-
-<head>
-  <meta charset="UTF-8">
-  <title>meter test</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/png" href="https://joshdchang.github.io/snowday/favicon.png"/>
-<link rel="apple-touch-icon" href="https://joshdchang.github.io/snowday/favicon.png">
-<meta name="google-site-verification" content="-ypOjVw6descs20mnW17STm32JT_oUODTrBlNRXDiwg"/>
-<meta property="og:title" content="Future Outlook | Josh's Snow Day Prediction"/>
-        <meta property="og:image" content="https://docs.google.com/drawings/d/e/2PACX-1vRlOMOk72a4oIRImUrRv0qy8TcYTp33BhpKs8JcDZ9X5EjXP58fezCR0MJGjQmOYsR1eNwI46RN2lov/pub?w=1084&amp;h=1880"/>
-<meta name="description" content="Future Storm Outlook - Josh Chang's official snow day and 2-hour delay predictions for the Irvington Union Free School District (New York).">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Product+Sans:400,500,700" rel="stylesheet">
-<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
-<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
-  
-  <link rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-
-      <link rel="stylesheet" href="css/style.css">
-
-  
-</head>
-
-<body>
-
+	<head>
+		<meta charset="UTF-8">
+		<title>meter test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="https://joshdchang.github.io/snowday/favicon.png"/>
+		<link rel="apple-touch-icon" href="https://joshdchang.github.io/snowday/favicon.png">
+		<meta name="google-site-verification" content="-ypOjVw6descs20mnW17STm32JT_oUODTrBlNRXDiwg"/>
+		<meta property="og:title" content="Future Outlook | Josh's Snow Day Prediction"/>
+		<meta property="og:image" content="https://docs.google.com/drawings/d/e/2PACX-1vRlOMOk72a4oIRImUrRv0qy8TcYTp33BhpKs8JcDZ9X5EjXP58fezCR0MJGjQmOYsR1eNwI46RN2lov/pub?w=1084&amp;h=1880"/>
+		<meta name="description" content="Future Storm Outlook - Josh Chang's official snow day and 2-hour delay predictions for the Irvington Union Free School District (New York).">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Product+Sans:400,500,700" rel="stylesheet">
+		<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"; ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
+		<link rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'>
+		<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
   		<header class="mdc-top-app-bar mdc-top-app-bar--fixed">
-    	<div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-					<a href='' class="material-icons mdc-top-app-bar__navigation-icon" onClick="changePage('dashboard')" title="Home">ac_unit</a>
-					<span class="mdc-top-app-bar__title">Snow Day Forecast</span>
-        </section>
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-					<button class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onclick="warningOpening()" title="Weather alerts">warning</button>
-        </section>
-</div>
+			<div class="mdc-top-app-bar__row">
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+				<a href='' class="material-icons mdc-top-app-bar__navigation-icon" onClick="changePage('dashboard')" title="Home">ac_unit</a>
+				<span class="mdc-top-app-bar__title">Snow Day Forecast</span>
+			</section>
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+				<button class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onclick="warningOpening()" title="Weather alerts">warning</button>
+			</section>
+			</div>
 			<div class="mdc-top-app-bar__row tab-bar">
-        <div class="mdc-tab-bar" role="tablist">
+        		<div class="mdc-tab-bar" role="tablist">
 					<div class="mdc-tab-scroller">
 						<div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
 							<div class="mdc-tab-scroller__scroll-content">
@@ -69,7 +61,7 @@ ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf
 			</div>
 		</header>
 		<div class="mdc-top-app-bar--fixed-adjust">
-    	<div class="content">
+    		<div class="content">
 				<div id="loading" class="visible page">
 					<img src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966" class="loading-image"></img>
 				</div>
@@ -296,15 +288,7 @@ ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf
 				</div>
 			</div>
 		</div>
-  <script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
-</body>
-
+  		<script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
+    	<script  src="js/index.js"></script>
+	</body>
 </html>
