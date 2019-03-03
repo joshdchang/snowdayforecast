@@ -18,7 +18,6 @@ function getCookie(cname) {
   }
   return "";
 }
-
 function changePage(pageId) {
 	var visible = document.getElementsByClassName("visible");
 	var pageC = getCookie('page');
@@ -228,9 +227,9 @@ function dismissSnack(){
 	$('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--closing');
 }
 function copyLink() {
-  var copy = document.getElementById("copy");
-  copy.select();
-  document.execCommand("copy");
-  $('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--open');
+  	var copy = document.getElementById("copy");
+  	copy.select();
+  	document.execCommand("copy");
+  	$('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--open');
 	setTimeout(dismissSnack, 6000);
 }
