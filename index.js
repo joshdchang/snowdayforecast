@@ -227,25 +227,27 @@ resize();
 function dismissSnack(){
 	$('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--closing');
 }
-function copyLink(el) {
-		el = document.getElementById('copy');
-    var oldContentEditable = el.contentEditable,
-        oldReadOnly = el.readOnly,
-        range = document.createRange();
-
-    el.contentEditable = true;
-    el.readOnly = false;
-    range.selectNodeContents(el);
-
-    var s = window.getSelection();
-    s.removeAllRanges();
-    s.addRange(range);
-    el.setSelectionRange(0, 999999);
-    el.contentEditable = oldContentEditable;
-    el.readOnly = oldReadOnly;
-		el.select();
-    document.execCommand('copy');
-	
-		$('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--open');
-		setTimeout(dismissSnack, 6000);
+function copyLink() {
+	var $input = $('#copy');
+	if(navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+		var el = $input.get(0);
+		var editable = el.contentEditable;
+		var readOnly = el.readOnly;
+		el.contentEditable = true;
+		el.readOnly = false;
+		var range = document.createRange();
+		range.selectNodeContents(el);
+		var sel = window.getSelection();
+		sel.removeAllRanges();
+		sel.addRange(range);
+		el.setSelectionRange(0, 999999);
+		el.contentEditable = editable;
+		el.readOnly = readOnly;
+	} else {
+		$input.select();
+	}
+	document.execCommand('copy');
+	$input.blur();
+	$('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--open');
+	setTimeout(dismissSnack, 6000);
 }
