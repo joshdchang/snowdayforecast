@@ -227,10 +227,25 @@ resize();
 function dismissSnack(){
 	$('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--closing');
 }
-function copyLink() {
-  var copy = document.getElementById("copy");
-  copy.select();
-  document.execCommand("copy");
-  $('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--open');
-	setTimeout(dismissSnack, 6000);
+function copyLink(el) {
+		el = document.getElementById('copy');
+    var oldContentEditable = el.contentEditable,
+        oldReadOnly = el.readOnly,
+        range = document.createRange();
+
+    el.contentEditable = true;
+    el.readOnly = false;
+    range.selectNodeContents(el);
+
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+    el.setSelectionRange(0, 999999);
+    el.contentEditable = oldContentEditable;
+    el.readOnly = oldReadOnly;
+		el.select();
+    document.execCommand('copy');
+	
+		$('.mdc-snackbar').attr('class', 'mdc-snackbar mdc-snackbar--open');
+		setTimeout(dismissSnack, 6000);
 }
