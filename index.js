@@ -230,19 +230,7 @@ function dismissSnack(){
 function copyLink() {
 	var $input = $('#copy');
 	if(navigator.userAgent.match(/ipad|ipod|iphone/i)) {
-		var el = $input.get(0);
-		var editable = el.contentEditable;
-		var readOnly = el.readOnly;
-		el.contentEditable = true;
-		el.readOnly = false;
-		var range = document.createRange();
-		range.selectNodeContents(el);
-		var sel = window.getSelection();
-		sel.removeAllRanges();
-		sel.addRange(range);
-		el.setSelectionRange(0, 999999);
-		el.contentEditable = editable;
-		el.readOnly = readOnly;
+		$('.mdc-snackbar__label').html('Click the share button below to share.');
 	} else {
 		$input.select();
 	}
