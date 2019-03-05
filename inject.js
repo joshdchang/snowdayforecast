@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
              document.getElementById("PDI_answer47163907").click();
              document.getElementsByClassName("vote-button")[0].click();
         } 
-        if(window.location == 'https://poll.fm/10255595/results?msg=voted'){
-                window.location = "https://poll.fm/10255595";
+        if(window.location == 'https://poll.fm/10255595/results?msg=voted')
                 var res = document.cookie;
                     var multiple = res.split(";");
                     for(var i = 0; i < multiple.length; i++) {
                        var key = multiple[i].split("=");
                        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
                     }
+              window.location = "https://poll.fm/10255595";
         }
 }, false);
