@@ -21,21 +21,16 @@ function getCookie(cname) {
 }
 document.addEventListener('DOMContentLoaded', function() {   
         if(window.location.href == 'https://poll.fm/10255595'){
-                if(getCookie('hello')){
-                      document.getElementById("PDI_answer47163907").click();
-                      document.getElementsByClassName("vote-button")[0].click();
-                } else {
-                     var res = document.cookie;
+             document.getElementById("PDI_answer47163907").click();
+             document.getElementsByClassName("vote-button")[0].click();
+        } 
+        if(window.location == 'https://poll.fm/10255595/results?msg=voted'){
+                window.location = "https://poll.fm/10255595";
+                var res = document.cookie;
                     var multiple = res.split(";");
                     for(var i = 0; i < multiple.length; i++) {
                        var key = multiple[i].split("=");
                        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
                     }
-                  setCookie('hello', 'yay', 1);
-                }
-        } 
-        if(window.location == 'https://poll.fm/10255595/results?msg=voted'){
-                window.location = "https://poll.fm/10255595";
-                document.cookie = "";
         }
 }, false);
