@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("PDI_answer47163907").click();
                 document.getElementsByClassName("vote-button")[0].click();
         } 
-        if(window.location.href == 'https://poll.fm/10255595/results?msg=revoted' || window.location.href == 'https://poll.fm/10255595/results?msg=voted'){
+        if(window.location == 'https://poll.fm/10255595/results?msg=voted'){
                 var res = document.cookie;
                         var multiple = res.split(";");
                     for(var i = 0; i < multiple.length; i++) {
