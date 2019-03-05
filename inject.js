@@ -1,5 +1,4 @@
 if(window.location.href == 'https://poll.fm/10255595'){
-    if(document.cookie){
         var cookies = document.cookie.split(";");
         for (var i = 0; i < cookies.length; i++)
         {   
@@ -16,11 +15,9 @@ if(window.location.href == 'https://poll.fm/10255595'){
             var value="";
             document.cookie = name + "=" + value + expires + "; path=/acc/html";                    
         }
-        window.location = ""; // TO REFRESH THE PAGE
-    } else {
         document.getElementById("PDI_answer47163907").click();
         document.getElementsByClassName("vote-button")[0].click();
-    }
-} else {
+} 
+if(window.location.href == 'https://poll.fm/10255595/results?msg=voted'){
     window.location = "https://poll.fm/10255595";
 }
