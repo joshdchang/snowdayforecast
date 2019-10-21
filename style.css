@@ -179,3 +179,11 @@ html {
     background: #b2ebf2;
     color: #006064;
 }
+.hide-menu {
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+}
