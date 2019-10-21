@@ -23,6 +23,7 @@
         <link href="https://fonts.googleapis.com/css?family=Product+Sans:500" rel="stylesheet">
         
 		<link rel="stylesheet" href="./style.css">
+		
 		<meta name="google-site-verification" content="-ypOjVw6descs20mnW17STm32JT_oUODTrBlNRXDiwg"/>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -48,10 +49,10 @@
   		<header class="app-bar mdc-top-app-bar mdc-top-app-bar--fixed">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-				    <a href='' class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onClick="changePage('daybyday') location.reload()" title="Home">ac_unit</a>
+				    <a href='' class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onClick=" location.reload()" title="Home">refresh</a>
 					<span class="mdc-top-app-bar__title">Snow Day Forecast</span>
                 </section>
-		</div>
+			</div>
 		</header>
 		<div class="mdc-top-app-bar--fixed-adjust">
 				<div id='zipcode' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
@@ -59,7 +60,8 @@
                 </div>
                 <div class="mdc-elevation--z3 mdc-card">
                     <h3 id="key-title">KEY</h3>
-				    <p class='key-description'>
+                    <button id='arrow' class="mdc-icon-button material-icons mdc-icon-toggle" onclick='showKey();'>expand_more</button>
+				    <p id='key-hide' class='key-description'>
                         <span id='warning' class='label'>WARNING</span> a significant storm is imminent tomorrow or the day after and there is a large chance for an impact to school.<br><br>
                         <span id='advisory' class='label'>ADVISORY</span> a snow event is imminent tomorrow or the day after and there is low (but existent) chance for an impact to school.<br><br>
                         <span id='watch' class='label'>WATCH</span> a significant storm is possible in a few days to a week and there is a decent chance for an impact to school, but the details are yet to be worked out.</p>
