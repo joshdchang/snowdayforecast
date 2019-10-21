@@ -19,12 +19,11 @@
 		
 		<link rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'>
 		<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet'>
 		<link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Product+Sans:400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Product+Sans:500" rel="stylesheet">
+        
 		<link rel="stylesheet" href="./style.css">
 		
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129270386-1"></script>
 		<meta name="google-site-verification" content="-ypOjVw6descs20mnW17STm32JT_oUODTrBlNRXDiwg"/>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -43,52 +42,33 @@
 					rows[i - 1] = [spData[i * 8 + 1].gs$cell.$t, spData[i * 8 + 2].gs$cell.$t, spData[i * 8 + 3].gs$cell.$t, spData[i * 8 + 4].gs$cell.$t, spData[i * 8 + 5].gs$cell.$t, spData[i * 8 + 6].gs$cell.$t];
 				}
 			}
-console.log(rows);
 		</script>
 		<script src="https://spreadsheets.google.com/feeds/cells/1ZQLygPgQTcZ4f8qJyRQlTn9e4n0PuSO3CYlxaKrBY1Y/1/public/values?alt=json-in-script&callback=doData"></script>
 	</head>
 	<body>
   		<header class="app-bar mdc-top-app-bar mdc-top-app-bar--fixed">
-    			<div class="mdc-top-app-bar__row">
-        			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-					<a href='' class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onClick="changePage('daybyday') location.reload()" title="Home">ac_unit</a>
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+				    <a href='' class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onClick="changePage('daybyday') location.reload()" title="Home">ac_unit</a>
 					<span class="mdc-top-app-bar__title">Snow Day Forecast</span>
-        			</section>
+                </section>
 			</div>
 		</header>
 		<div class="mdc-top-app-bar--fixed-adjust">
-		<div class="adjust">
-    			<div class="content">
-				<div id="loading" class="visible page">
-					<img src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966" class="loading-image"></img>
-				</div>
-				<div id="page404" class="hidden page">
-					<p id="notfoundtext">That page doesn't exist.</p>
-					<button class="mdc-button mdc-button--raised" onClick="changePage('daybyday')">Back to Home</button>
-				</div>
-				<div id="daybyday" class="hidden page">
-					<input type="text" value="https://snowdayforecast.com/" id="copy">
-					<div class="card-wrapper" id="daybyday-wrapper">
-						<div id='zipcode' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
-							<h2 id='zip-title' class="card-title mdc-typography--headline6">Irvington, NY</h2>
-							<p id='zip-description'>This is a temporary page that will be updated manually until my automatic system is completed later this year.</p>
-						</div>
-						<div id='nomessage' class="mdc-card mdc-elevation--z3">
-							<div class="card-content">
-								<h2 class="card-title mdc-typography--headline6">No Alerts :(</h2>
-								<div class="horline-container"><div class="horizontal-line"></div></div>
-								<div class="stat-description percent-label">There are no school alerts currently in effect for Irvington, NY. Check back here another time.</div>
-								<div class="horline-container"><div class="horizontal-line"></div></div>
-							</div>
-							<div class="mdc-card__actions">
-								<div class="mdc-card__action-buttons">
-									<a class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="More charts and stats" href="https://forecast.weather.gov/MapClick.php?lat=41.03571490000007&lon=-73.86820269999998#detailed-forecast">Weather.gov Forecast</a>
-								</div>
-								<div class="mdc-card__action-icons">
-									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" title="Share">share</button>
-								</div>
-							</div>
-						</div>
+				<div id='zipcode' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
+				    <p class='zip-description'>This page contains the latest chances for snow days and delays for Irvington, NY (if there is any).</p>
+                </div>
+                <div class="mdc-elevation--z3 mdc-card">
+                    <h3 id="key-title">KEY</h3>
+				    <p class='key-description'>
+                        <span id='warning' class='label'>WARNING</span> a significant storm is imminent tomorrow or the day after and there is a large chance for an impact to school.<br><br>
+                        <span id='advisory' class='label'>ADVISORY</span> a snow event is imminent tomorrow or the day after and there is low (but existent) chance for an impact to school.<br><br>
+                        <span id='watch' class='label'>WATCH</span> a significant storm is possible in a few days to a week and there is a decent chance for an impact to school, but the details are yet to be worked out.</p>
+                </div>
+                <div id="nomessage" class="mdc-elevation--z3 mdc-card">
+                    <h3 id="key-title">NO ALERTS</h3>
+				    <p class='key-description'>There are no alerts currently in effect. Check back here regularly to stay updated on possible snow days.</p>
+                </div>
 						<div id='message1' class="mdc-card mdc-elevation--z3">
 							<div class="card-content">
 								<p class="status-title none-title">Loading...</p>
@@ -111,27 +91,16 @@ console.log(rows);
 							</div>
 							<div class="mdc-card__actions">
 								<div class="mdc-card__action-buttons">
-									<a class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="Weather.gov Forecast" href="https://forecast.weather.gov/MapClick.php?lat=41.03571490000007&lon=-73.86820269999998#.XHtvi5NKgWo">Weather.gov Forecast</a>
+									<a target=”_blank” class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" title="Weather.gov Forecast" href="https://forecast.weather.gov/MapClick.php?lat=41.03571490000007&lon=-73.86820269999998#.XHtvi5NKgWo">Weather.gov Forecast</a>
 								</div>
 								<div class="mdc-card__action-icons">
-									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" onClick='copyLink()' title="Share">share</button>
+									<button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle" onClick="navigator.share({title: 'Snow Day Forecast',text: 'Snow day forecast for Irvington, NY',url: 'https://snowdayforecast.com',}).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));" title="Share">share</button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="mdc-snackbar">
-						<div class="mdc-snackbar__surface">
-							<div class="mdc-snackbar__label" role="status" aria-live="polite">Link Copied</div>
-							<div class="mdc-snackbar__actions">
-								<button class="mdc-icon-button mdc-snackbar__dismiss material-icons" title="Dismiss" onClick='dismissSnack()'>close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
   		<script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    		<script  src="./index.js"></script>
+    		<script  src="./script.js"></script>
 	</body>
 </html>
