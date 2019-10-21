@@ -53,6 +53,7 @@ html {
 	vertical-align: top;
     border-radius: 15px;
     width: calc(100% - 30px);
+    box-shadow: 0 0px 5px rgba(35, 35, 34, 0.28);
 }
 .mdc-card__actions {
 	margin-top: -6px;
