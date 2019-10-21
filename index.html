@@ -39,7 +39,7 @@
 			function doData(json) {
 				spData = json.feed.entry;
 				for(var i = 1; i < spData.length/8; i++){
-					rows[i - 1] = [spData[i * 8 + 1].gs$cell.$t, spData[i * 8 + 2].gs$cell.$t, spData[i * 8 + 3].gs$cell.$t, spData[i * 8 + 4].gs$cell.$t, spData[i * 8 + 5].gs$cell.$t, spData[i * 8 + 6].gs$cell.$t];
+				 rows[i - 1] = [spData[i * 8 + 1].gs$cell.$t, spData[i * 8 + 2].gs$cell.$t, spData[i * 8 + 3].gs$cell.$t, spData[i * 8 + 4].gs$cell.$t, spData[i * 8 + 5].gs$cell.$t, spData[i * 8 + 6].gs$cell.$t];
 				}
 			}
 		</script>
