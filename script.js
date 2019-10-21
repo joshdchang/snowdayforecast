@@ -155,3 +155,12 @@ for(var i = 0; i < rows.length; i++){
 }
 
 displayData();
+
+function hideKey(){
+    document.getElementById("key-hide").style.display = "none"; 
+    document.getElementById("arrow").outerHTML = '<button id="arrow" class="mdc-icon-button material-icons mdc-icon-toggle" onclick="showKey()">expand_more</button>';
+}
+function showKey(){
+    document.getElementById("key-hide").style.display = "block";
+    document.getElementById("arrow").outerHTML = '<button id="arrow" class="mdc-icon-button material-icons mdc-icon-toggle" onclick="hideKey()">expand_less</button>';
+}
