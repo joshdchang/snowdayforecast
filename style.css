@@ -23,9 +23,6 @@ html {
 	font-family: "Product Sans", "Roboto", sans-serif;
 	margin-left: -18px;
 }
-.mdc-top-app-bar__navigation-icon {
-	margin-left: 10px;
-}
 .card-media {
 	margin-bottom: 0px;
 	border-radius: 15px 15px 0px 0px;
@@ -45,14 +42,12 @@ html {
 }
 .mdc-card {
 	min-width: 297px;
-    margin: 15px;
-    margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 	display: inline-block;
 	text-align: left;
 	vertical-align: top;
     border-radius: 15px;
-    width: calc(100% - 30px);
+    width: 100%;
     box-shadow: 0 0px 5px rgba(35, 35, 34, 0.28);
 }
 .mdc-card__actions {
@@ -100,12 +95,11 @@ html {
 	margin-left: 20px;
 	color: #757575;
 	font-weight: 400;
-	margin-top: 15px;
 	margin-right: 20px;
 	font-size: 17px;
 }
 #zipcode {
-    margin-top: 15px;
+    margin-top: 1px;
 }
 .status-title {
 	margin-top: 0px;
@@ -187,4 +181,12 @@ html {
 	left: 0;
 	width: 50px;
 	height: 50px;
+}
+#arrow {
+    position: absolute;
+    right: 20px;
+    margin-top: -55px;
+}
+#key-hide {
+    display: none;
 }
