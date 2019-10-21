@@ -1,37 +1,10 @@
 :root {
     --mdc-theme-background: #EEEEEE;
-		--mdc-theme-primary: #1976D2;
-    --mdc-theme-text-primary-on-primary: white;
-    --mdc-theme-text-secondary-on-primary: hsla(0,0%,100%,.7);
-    --mdc-theme-text-hint-on-primary: hsla(0,0%,100%,.5);
-    --mdc-theme-text-disabled-on-primary: hsla(0,0%,100%,.5);
-    --mdc-theme-text-icon-on-primary: hsla(0,0%,100%,.5);
-    --mdc-theme-text-primary-on-accent: #fff;
-    --mdc-theme-text-secondary-on-accent: hsla(0,0%,100%,.7);
-    --mdc-theme-text-hint-on-accent: hsla(0,0%,100%,.5);
-    --mdc-theme-text-disabled-on-accent: hsla(0,0%,100%,.5);
-    --mdc-theme-text-icon-on-accent: hsla(0,0%,100%,.5);
-    --mdc-theme-text-primary-on-background: rgba(0,0,0,.87);
-    --mdc-theme-text-secondary-on-background: rgba(0,0,0,.54);
-    --mdc-theme-text-hint-on-background: rgba(0,0,0,.38);
-    --mdc-theme-text-disabled-on-background: rgba(0,0,0,.38);
-    --mdc-theme-text-icon-on-background: rgba(0,0,0,.38);
-    --mdc-theme-text-primary-on-light: rgba(0,0,0,.87);
-    --mdc-theme-text-secondary-on-light: rgba(0,0,0,.54);
-    --mdc-theme-text-hint-on-light: rgba(0,0,0,.38);
-    --mdc-theme-text-disabled-on-light: rgba(0,0,0,.38);
-    --mdc-theme-text-icon-on-light: rgba(0,0,0,.38);
-    --mdc-theme-text-primary-on-dark: #fff;
-    --mdc-theme-text-secondary-on-dark: hsla(0,0%,100%,.7);
-    --mdc-theme-text-hint-on-dark: hsla(0,0%,100%,.5);
-    --mdc-theme-text-disabled-on-dark: hsla(0,0%,100%,.5);
-    --mdc-theme-text-icon-on-dark: hsla(0,0%,100%,.5);
+	--mdc-theme-primary: #2979ff;
 }
 html {
 	font-family: "Google Sans", "Roboto", sans-serif;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-text-size-adjust: 100%;
-	background-color: #EEEEEE;
+	background: #f5f5f5;
 }
 .mdc-button {
 	font-family: "Google Sans", "Roboto", sans-serif;
@@ -43,55 +16,23 @@ html {
 	position: fixed;
 	z-index: 7;
 	margin-top: -8px;
-	background-color: #1976D2;
+	background-color: #2979ff;
 	color: white;
 }
 .mdc-top-app-bar__title {
 	font-family: "Product Sans", "Roboto", sans-serif;
 	margin-left: -18px;
 }
-.adjust {
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-top: -8px;
-}
 .mdc-top-app-bar__navigation-icon {
 	margin-left: 10px;
 }
-.content {
-	color: #BDBDBD;
-	font-weight: 500;
-	font-size: 20px;
-	margin-right: -13px;
-	margin-left: -13px;
-}
-.animate {
-	-o-transition: .16s;
-  -ms-transition: .16s;
-  -moz-transition: .16s;
-  -webkit-transition: .16s;
-  transition: .16s;
-}
-.visible {
-	position: relative;
-	visibility: visible;
-}
-.hidden {
-	position: absolute;
-	visibility: hidden;
-	bottom: 0px;
-	display: block;
-	overflow: hidden;
-	width: 0px;
-	height: 0px;
-}
 .card-media {
 	margin-bottom: 0px;
-	border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -o-border-radius: 5px 5px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  -o-border-radius: 15px 15px 0px 0px;
 	position: relative;
-  overflow: hidden;
+    overflow: hidden;
 }
 .card-title {
 	margin-left: 15px;
@@ -103,23 +44,15 @@ html {
 	font-family: "Google Sans", "Roboto", sans-serif;
 }
 .mdc-card {
-	margin-top: 14px;
-	margin-left: 7px;
-	margin-right: 7px;
-	margin-bottom: 0px;
 	min-width: 297px;
+    margin: 15px;
+    margin-top: 0px;
+    margin-bottom: 15px;
 	display: inline-block;
 	text-align: left;
 	vertical-align: top;
-}
-.card-wrapper {
-	text-align: left;
-	width: calc(100% + 14px);
-	margin-left: -14px;
-	margin-left: -14px;
-	padding-left: 7px;
-	padding-right: 7px;
-	margin-bottom: 18px;
+    border-radius: 15px;
+    width: calc(100% - 30px);
 }
 .mdc-card__actions {
 	margin-top: -6px;
@@ -141,17 +74,9 @@ html {
 	font-weight: 400;
 	padding-right: 20px;
 }
-.hide-menu {
-	background-color: white;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50px;
-	height: 50px;
-}
 .myChart {
 	height: 300px;
-  width: 100%;
+    width: 100%;
 	margin-top: -10px;
 	margin-bottom: -115px;
 	display: inline-block;
@@ -166,48 +91,20 @@ html {
 .last-chart-name {
 	margin-bottom: 0px;
 }
-#loading {
-	text-align: center;
-}
-.loading-image {
-	display: inline-block;
-	margin-top: 100px;
-	width: 100px;
-}
-#page404 {
-	margin-left: 0px;
-	text-align: center;
-}
-#page404 button {
-	min-width: 205px;
-	margin-right: 0px;
-}
 #notfoundtext {
 	margin-top: 35px;
 	min-width: 205px;	color: #757575;
 }
-#zipcode {
-	margin: auto;
-	margin-left: 7px;
-	margin-right: 7px;
-	margin-top: 15px;
-	padding-top: 6px;
-	padding: auto;
-	padding-bottom: 5px;
-}
-#zipcode .card-title {
-	margin-top: 7px;
-	margin-left: 15px;
-	margin-bottom: 0px;
-	padding-top: 4px;
-}
-#zip-description {
+.zip-description {
 	margin-left: 20px;
-	color: #9E9E9E;
+	color: #757575;
 	font-weight: 400;
 	margin-top: 15px;
 	margin-right: 20px;
 	font-size: 17px;
+}
+#zipcode {
+    margin-top: 15px;
 }
 .status-title {
 	margin-top: 0px;
@@ -217,9 +114,9 @@ html {
 	margin-bottom: 0px;
 	font-size: 20px;
 	overflow: hidden;
-	border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -o-border-radius: 5px 5px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  -o-border-radius: 15px 15px 0px 0px;
 	position: relative;
 	color: #424242;
 	background-color: #E0E0E0;
@@ -249,7 +146,36 @@ html {
 #message1 {
 	display: none;
 }
-#copy {
-	position: absolute;
-	top: -120px;
+.label {
+    background: #bdbdbd;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 1px;
+    border-radius: 8px;
+    margin-right: 4px;
+}
+.key-description {
+    margin-left: 20px;
+	color: #757575;
+	font-weight: 400;
+	margin-top: 15px;
+	margin-right: 20px;
+	font-size: 17px;
+    padding-bottom: 10px;
+}
+#key-title {
+    margin-left: 20px;
+    color: #424242;
+}
+#warning {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+#advisory {
+    background: #ffe082;
+    color: #a34700;
+}
+#watch {
+    background: #b2ebf2;
+    color: #006064;
 }
