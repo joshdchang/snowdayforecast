@@ -164,8 +164,3 @@ function showKey(){
     document.getElementById("key-hide").style.display = "block";
     document.getElementById("arrow").outerHTML = '<button id="arrow" class="mdc-icon-button material-icons mdc-icon-toggle" onclick="hideKey()">expand_less</button>';
 }
-
-PullToRefresh.init({
-    mainElement: '#main',
-    onRefresh: function() { location.reload(); }
-});
