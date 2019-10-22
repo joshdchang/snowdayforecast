@@ -39,7 +39,7 @@
 			function doData(json) {
 				spData = json.feed.entry;
 				for(var i = 1; i < spData.length/8; i++){
-				 rows[i - 1] = [spData[i * 8 + 1].gs$cell.$t, spData[i * 8 + 2].gs$cell.$t, spData[i * 8 + 3].gs$cell.$t, spData[i * 8 + 4].gs$cell.$t, spData[i * 8 + 5].gs$cell.$t, spData[i * 8 + 6].gs$cell.$t];
+					rows[i - 1] = [spData[i * 8 + 1].gs$cell.$t, spData[i * 8 + 2].gs$cell.$t, spData[i * 8 + 3].gs$cell.$t, spData[i * 8 + 4].gs$cell.$t, spData[i * 8 + 5].gs$cell.$t, spData[i * 8 + 6].gs$cell.$t];
 				}
 			}
 		</script>
@@ -47,14 +47,17 @@
 	</head>
 	<body>
   		<header class="app-bar mdc-top-app-bar mdc-top-app-bar--fixed">
-            <div class="mdc-top-app-bar__row">
+            <div class="mdc-top-app-bar__row" id='top-bar-title-section'>
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-				    <a href='' class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onClick=" location.reload()" title="Home">refresh</a>
+                    <img src='https://docs.google.com/drawings/d/e/2PACX-1vTyUzAI2KwRq2vp8V35hQEFp3wa5hX-mtj9DPx4tvz4h1rWeFPf6s04ynrKsXzOIrAD03wcbBymC3-T/pub?w=192&h=192' id='top-bar-img'>
 					<span class="mdc-top-app-bar__title">Snow Day Forecast</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+				    <a href='' class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" onClick=" location.reload()" title="Home">refresh</a>
                 </section>
 			</div>
 		</header>
-		<div class="mdc-top-app-bar--fixed-adjust">
+		<div class="mdc-top-app-bar--fixed-adjust" id='main'>
 				<div id='zipcode' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
 				    <p class='zip-description'>This page contains the latest chances for snow days and delays for Irvington, NY (if there is any).</p>
                 </div>
@@ -102,6 +105,8 @@
 					</div>
   		<script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script src="/pulltorefresh.js/demos/pulltorefresh.js?1537157676936"></script>
     		<script  src="./script.js"></script>
+        
 	</body>
 </html>
