@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Snow Day Forecast</title>
 		
+        <meta http-equiv="refresh" content="600">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0"/>
 		<link rel="shortcut icon" type="image/png" href="https://docs.google.com/drawings/d/e/2PACX-1vSPy1N4FwnkZ421Q6eswKW2K-3EqpMUEv7QE1cBB-Gsxp8Oq2msBMWxyrT1qetu9Dha9g2YLzt4a7Eq/pub?w=300&amp;h=300"/>
 		<link rel="icon" type="image/png" sizes="16x16" href="https://docs.google.com/drawings/d/e/2PACX-1vSPy1N4FwnkZ421Q6eswKW2K-3EqpMUEv7QE1cBB-Gsxp8Oq2msBMWxyrT1qetu9Dha9g2YLzt4a7Eq/pub?w=16&amp;h=16">
@@ -57,19 +58,23 @@
 			</div>
 		</header>
 		<div class="mdc-top-app-bar--fixed-adjust" id='main'>
+            <div id='NWS-card' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
+                <h3 class="key-title">GOVERNMENT MESSAGES</h3>
+            </div>
 				<div id='zipcode' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
 				    <p class='zip-description'>This page contains the latest chances for snow days and delays for Irvington, NY (if there is any).</p>
                 </div>
                 <div class="mdc-elevation--z3 mdc-card">
-                    <h3 id="key-title">KEY</h3>
+                    <h3 class="key-title">KEY</h3>
                     <button id='arrow' class="mdc-icon-button material-icons mdc-icon-toggle" onclick='showKey();'>expand_more</button>
 				    <p id='key-hide' class='key-description'>
-                        <span id='warning' class='label'>WARNING</span> a significant storm is imminent and there is a large chance for an impact to school.<br><br>
-                        <span id='advisory' class='label'>ADVISORY</span> a snow event is imminent and there is low (but existent) chance for an impact to school.<br><br>
-                        <span id='watch' class='label'>WATCH</span> a significant storm is possible and there is a decent chance for an impact to school, but the details are yet to be worked out.</p>
+                        <span id='warning' class='label'>WARNING</span> a significant storm is imminent and there is a high chance for an impact to school.<br><br>
+                        <span id='advisory' class='label'>ADVISORY</span> a snow event is likely and there is low (but existent) chance for an impact to school.<br><br>
+                        <span id='watch' class='label'>WATCH</span> a significant storm is possible and there is some chance for an impact to school, but the details are yet to be worked out.<br><br>
+                        <span id='notice' class='label'>NOTICE</span> a snow event is possible in the medium to long term, so check back for updates.</p>
                 </div>
                 <div id="nomessage" class="mdc-elevation--z3 mdc-card">
-                    <h3 id="key-title">NO ALERTS</h3>
+                    <h3 class="key-title">NO ALERTS</h3>
 				    <p class='key-description'>There are no alerts currently in effect. Check back here regularly to stay updated on possible snow days.</p>
                 </div>
 						<div id='message1' class="mdc-card mdc-elevation--z3">
