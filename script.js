@@ -164,3 +164,41 @@ function showKey(){
     document.getElementById("key-hide").style.display = "block";
     document.getElementById("arrow").outerHTML = '<button id="arrow" class="mdc-icon-button material-icons mdc-icon-toggle" onclick="hideKey()">expand_less</button>';
 }
+
+function toggleNWS(id){
+    var desc = document.getElementById("NWS-alert" + id);
+    if(desc.style.display == "none"){
+        desc.style.display = "block";
+    } else {
+        desc.style.display = "none";
+    }
+}
+$.get("https://api.weather.gov/alerts/active?status=actual&message_type=alert,update&point=41.041920,-73.854157", function(data){
+    console.log(data);
+    if(data.features.length > 0){
+        var NWScard = document.getElementById("NWS-card");
+        NWScard.style.display = "inline-block";
+        for(var i = 0; i < data.features.length; i++){
+            var issued = new Date(data.features[i].properties.sent);
+            var description =  (data.features[i].properties.parameters.NWSheadline[0] + '<br><br>' + data.features[i].properties.description.replace(/(?:\r\n|\r|\n)/g, '<br>')).split('<br><br>').join('$doubleBreak').split('<br>').join(' ').split('$doubleBreak').join('<br><br>') + '<br><br>Issued on ' + issued.toLocaleDateString() + ' at ' + issued.toLocaleTimeString() + ' by the National Weather Service in' + data.features[i].properties.senderName.replace('NWS', '');
+            
+            var background = "#26a69a";
+            var severity = data.features[i].properties.severity;
+            if(severity == 'Minor'){
+                background = "#2196f3";
+            }
+            if(severity == 'Moderate'){
+                background = "#5c6bc0";
+            }
+            
+            if(severity == 'Severe'){
+                background = "#ec407a";
+            }
+            
+            if(severity == 'Extreme'){
+                background = "#f44336";
+            }
+            NWScard.innerHTML = NWScard.innerHTML + '<div class="NWS-alert" style="background:' + background + ';">' + data.features[i].properties.event + '<button class="mdc-icon-button material-icons mdc-icon-toggle NWS-button" onclick="toggleNWS(' + i + ');">expand_more</button><div class="NWS-description" id="NWS-alert' + i + '">' + description + '</div></div>';
+        }
+    }
+});
