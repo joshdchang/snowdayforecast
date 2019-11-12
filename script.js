@@ -173,7 +173,7 @@ function toggleNWS(id){
         desc.style.display = "none";
     }
 }
-$.get("https://api.weather.gov/alerts/active?status=actual&message_type=alert,update&zone=061515", function(data){
+$.get("https://api.weather.gov/alerts/active?status=actual&message_type=alert,update&zone=NYZ070", function(data){
     if(data.features){
         if(data.features.length > 0){
             var NWScard = document.getElementById("NWS-card");
