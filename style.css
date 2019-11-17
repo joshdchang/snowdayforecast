@@ -1,5 +1,5 @@
 :root {
-    --mdc-theme-background: #EEEEEE;
+	--mdc-theme-background: #EEEEEE;
 	--mdc-theme-primary: #2979ff;
 }
 html {
@@ -26,10 +26,10 @@ html {
 .card-media {
 	margin-bottom: 0px;
 	border-radius: 15px 15px 0px 0px;
-  -webkit-border-radius: 15px 15px 0px 0px;
-  -o-border-radius: 15px 15px 0px 0px;
+	-webkit-border-radius: 15px 15px 0px 0px;
+	-o-border-radius: 15px 15px 0px 0px;
 	position: relative;
-    overflow: hidden;
+	overflow: hidden;
 }
 .card-title {
 	margin-left: 15px;
@@ -42,13 +42,13 @@ html {
 }
 .mdc-card {
 	min-width: 297px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 	display: inline-block;
 	text-align: left;
 	vertical-align: top;
-    border-radius: 15px;
-    width: 100%;
-    box-shadow: 0 0px 5px rgba(35, 35, 34, 0.28);
+	border-radius: 15px;
+	width: 100%;
+	box-shadow: 0 0px 5px rgba(35, 35, 34, 0.28);
 }
 .mdc-card__actions {
 	margin-top: -6px;
@@ -72,7 +72,7 @@ html {
 }
 .myChart {
 	height: 300px;
-    width: 100%;
+	width: 100%;
 	margin-top: -10px;
 	margin-bottom: -115px;
 	display: inline-block;
@@ -90,7 +90,7 @@ html {
 #notfoundtext {
 	margin-top: 35px;
 	min-width: 205px;
-    color: #757575;
+	color: #757575;
 }
 .zip-description {
 	margin-left: 20px;
@@ -100,7 +100,7 @@ html {
 	font-size: 17px;
 }
 #zipcode {
-    margin-top: 1px;
+	margin-top: 2px;
 }
 .status-title {
 	margin-top: 0px;
@@ -111,8 +111,8 @@ html {
 	font-size: 20px;
 	overflow: hidden;
 	border-radius: 15px 15px 0px 0px;
-  -webkit-border-radius: 15px 15px 0px 0px;
-  -o-border-radius: 15px 15px 0px 0px;
+	-webkit-border-radius: 15px 15px 0px 0px;
+	-o-border-radius: 15px 15px 0px 0px;
 	position: relative;
 	color: #424242;
 	background-color: #E0E0E0;
@@ -143,41 +143,41 @@ html {
 	display: none;
 }
 .label {
-    background: #bdbdbd;
-    padding: 10px;
-    padding-bottom: 0px;
-    padding-top: 1px;
-    border-radius: 8px;
-    margin-right: 4px;
+	background: #bdbdbd;
+	padding: 10px;
+	padding-bottom: 0px;
+	padding-top: 1px;
+	border-radius: 8px;
+	margin-right: 4px;
 }
 .key-description {
-    margin-left: 20px;
+	margin-left: 20px;
 	color: #757575;
 	font-weight: 400;
 	margin-top: 15px;
 	margin-right: 20px;
 	font-size: 17px;
-    padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 .key-title {
-    margin-left: 20px;
-    color: #424242;
+	margin-left: 20px;
+	color: #424242;
 }
 #warning {
-    background: #ffcdd2;
-    color: #b71c1c;
+	background: #ffcdd2;
+	color: #b71c1c;
 }
 #advisory {
-    background: #ffe082;
-    color: #a34700;
+	background: #ffe082;
+	color: #a34700;
 }
 #watch {
-    background: #b2ebf2;
-    color: #006064;
+	background: #b2ebf2;
+	color: #006064;
 }
 #notice {
-    background: #E0E0E0;
-    color: #424242;
+	background: #E0E0E0;
+	color: #424242;
 }
 .hide-menu {
 	background-color: white;
@@ -188,46 +188,73 @@ html {
 	height: 50px;
 }
 #arrow {
-    position: absolute;
-    right: 20px;
-    margin-top: -55px;
+	position: absolute;
+	right: 20px;
+	margin-top: -55px;
 }
 #key-hide {
-    display: none;
+	display: none;
 }
 #top-bar-img {
-    width: 35px;
-    margin-left: 10px;
+	width: 35px;
+	margin-left: 10px;
 }
 #NWS-card {
-    display: none;
-    margin-top: 1px;
-    padding-bottom: 20px;
+	display: none;
+	margin-top: 0px;
+	padding-bottom: 20px;
 }
 .NWS-alert {
-    border-radius: 12px;
-    color: white;
-    padding: 10px;
-    padding-left: 15px;
-    margin-top: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 18px;
+	border-radius: 12px;
+	color: white;
+	padding: 10px;
+	padding-left: 15px;
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 18px;
 }
 .NWS-button {
-    position: absolute;
-    right: 30px;
-    margin-top: -13px;
+	position: absolute;
+	right: 30px;
+	margin-top: -13px;
 }
 .NWS-description {
+	display: none;
+	background: #eeeeee;
+	color: #212121;
+	margin-left: -15px;
+	margin-top: 8px;
+	margin-right: -10px;
+	margin-bottom: -10px;
+	border-radius: 0px 0px 12px 12px;
+	padding: 15px;
+	font-size: 14px;
+}
+#key-card {
     display: none;
-    background: #eeeeee;
-    color: #212121;
-    margin-left: -15px;
-    margin-top: 8px;
-    margin-right: -10px;
-    margin-bottom: -10px;
-    border-radius: 0px 0px 12px 12px;
-    padding: 15px;
-    font-size: 14px;
+}
+#weather-card {
+    margin-top: 0px;
+}
+#weather-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 10px;
+}
+#weather-temp {
+    font-size: 50px;
+    position: relative;
+    margin-top: -100px;
+    margin-left: 150px;
+    color: #616161;
+}
+#weather-conditions {
+    color: #616161;
+    position: relative;
+    margin-top: -50px;
+    margin-left: 150px;
+    margin-bottom: 40px;
 }
