@@ -1,6 +1,6 @@
 :root {
 	--mdc-theme-background: #EEEEEE;
-	--mdc-theme-primary: #e91e63;
+	--mdc-theme-primary: #2979ff;
 }
 html {
 	font-family: "Google Sans", "Roboto", sans-serif;
@@ -16,7 +16,7 @@ html {
 	position: fixed;
 	z-index: 7;
 	margin-top: -8px;
-	background-color: #e91e63;
+	background-color: #2979ff;
 	color: white;
 }
 .mdc-top-app-bar__title {
@@ -257,11 +257,4 @@ html {
     margin-top: -50px;
     margin-left: 150px;
     margin-bottom: 40px;
-}
-#map {
-    width: calc(100% - 30px);
-    margin-left: 15px;
-    margin-bottom: 20px;
-    border: 0;
-    border-radius: 10px;
 }
