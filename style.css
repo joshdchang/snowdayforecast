@@ -237,24 +237,39 @@ html {
 #weather-card {
     margin-top: 0px;
 }
-#weather-img {
-    width: 85px;
-    height: 85px;
-    border-radius: 10px;
-    margin-left: 20px;
-    padding: 10px;
+#weather {
+	margin: 20px;
+	display: grid;
+	grid-column-gap: 20px;
+	grid-template-columns: 115px auto;
 }
-#weather-temp {
-    font-size: 50px;
-    position: relative;
-    margin-top: -100px;
-    margin-left: 150px;
-    color: #616161;
+#weather-icon {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	width: 100%;
+	border-radius: 8px;
 }
-#weather-conditions {
-    color: #616161;
-    position: relative;
-    margin-top: -50px;
-    margin-left: 150px;
-    margin-bottom: 40px;
+#weather-info {
+	grid-column-start: 2;
+	grid-column-end: 2;
+}
+#weather-data {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #616161;
+}
+.weather-data-section {
+	margin-bottom: 7px;
+}
+.weather-datum {
+	background: #b3e5fc;
+	color: #0d47a1;
+	margin-left: 4px;
+	padding: 1px 6px;
+	border-radius: 4px;
+	font-weight: 500;
+}
+#weather-desc {
+	font-weight: 800;
+	font-size: 24px;
 }
