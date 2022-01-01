@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Snow Day Forecast | Irvington, NY</title>
+    <title>Snow Day Forecast | Irvington NY</title>
 
     <meta http-equiv="refresh" content="600">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
@@ -14,8 +14,8 @@
     <link rel="icon" type="image/png" sizes="32x32"
         href="https://docs.google.com/drawings/d/e/2PACX-1vSPy1N4FwnkZ421Q6eswKW2K-3EqpMUEv7QE1cBB-Gsxp8Oq2msBMWxyrT1qetu9Dha9g2YLzt4a7Eq/pub?w=32&amp;h=32">
 
-    <meta name="description" content="Advanced snow day and delay forecast for Irvington, NY.">
-    <meta property="og:title" content="Snow Day Forecast" />
+    <meta name="description" content="Advanced snow day forecast for Irvington, NY.">
+    <meta property="og:title" content="Snow Day Forecast | Irvington NY" />
     <meta property="og:image"
         content="https://docs.google.com/drawings/d/e/2PACX-1vSvjpQe0iUG-2CIM5evIb9Iwj3R-fFWiJL6WZYe4YKrd_vFgQwnSHvtxsXtnFgSqrlsKwRryGOcUCqJ/pub?w=600&amp;h=511" />
     <meta name="apple-mobile-web-app-title" content="Snow Day">
@@ -23,167 +23,60 @@
         href="https://docs.google.com/drawings/d/e/2PACX-1vSCNyzFlwRYZet6klrwf_jWpOSSzFwg4ubRwY6J51oCyhWHOlBBnsLHTVjjRmLTi8vmAlvCTdD_igbW/pub?w=900&amp;h=180">
     <meta name="theme-color" content="#0D47A1">
 
-    <link rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'>
     <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Product+Sans:500" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
     <meta name="google-site-verification" content="-ypOjVw6descs20mnW17STm32JT_oUODTrBlNRXDiwg" />
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-129270386-1');
-    </script>
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <script>
         zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
         ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
     </script>
-    <script>
-        var spData = null;
-        var rows = [];
-
-        function doData(json) {
-            spData = json.feed.entry;
-            for (var i = 1; i < spData.length / 8; i++) {
-                rows[i - 1] = [spData[i * 8 + 1].gs$cell.$t, spData[i * 8 + 2].gs$cell.$t, spData[i * 8 + 3].gs$cell.$t, spData[i * 8 + 4].gs$cell.$t, spData[i * 8 + 5].gs$cell.$t, spData[i * 8 + 6].gs$cell.$t];
-            }
-        }
-    </script>
-    <script
-        src="https://spreadsheets.google.com/feeds/cells/1ZQLygPgQTcZ4f8qJyRQlTn9e4n0PuSO3CYlxaKrBY1Y/1/public/values?alt=json-in-script&callback=doData"></script>
 </head>
 
 <body>
-    <header class="app-bar mdc-top-app-bar mdc-top-app-bar--fixed">
-        <div class="mdc-top-app-bar__row" id='top-bar-title-section'>
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <img src='https://docs.google.com/drawings/d/e/2PACX-1vTyUzAI2KwRq2vp8V35hQEFp3wa5hX-mtj9DPx4tvz4h1rWeFPf6s04ynrKsXzOIrAD03wcbBymC3-T/pub?w=192&h=192'
-                    id='top-bar-img'>
-                <span class="mdc-top-app-bar__title">Snow Day Forecast</span>
-            </section>
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-                <a href=''
-                    class="material-icons mdc-icon-toggle mdc-icon-button mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-                    onClick=" location.reload()" title="Home">refresh</a>
-            </section>
-        </div>
-    </header>
-    <div class="mdc-top-app-bar--fixed-adjust" id='main'>
-        <div id='zipcode' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
-            <p class='zip-description'>This site contains information, analysis, and probabilities for snow days and
-                delays in Irvington, NY.</p>
-        </div>
-        <div id='weather-card'
-            class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
-            <h3 class="key-title">CURRENT CONDITIONS</h3>
+
+    <div id='container'>
+
+        <div class='title'>Josh's Snow Day Forecast</div>
+        <div class='sub-title'>Snow day information and predictions for Irvington, NY<br><br><a href='https://instagram.com/irv.snowdays' target='_blank'>@irv.snowdays</a> on Instagram</div>
+        
+        <div class='card'>
+            <div class='card-title'>Current Conditions</div>
+            <div class='card-sub-title'><span class='material-icons'>place</span> Westchester Airport</div>
             <div id='weather'>
                 <img id='weather-icon'>
                 <span id='weather-info'>
                     <span id='weather-desc'>Loading...</span>
                     <div id='weather-data'>
-                        <div class='weather-data-section'>Temperature: <span class='weather-datum' id='weather-temp'>0 °F</span></div>
+                        <div class='weather-data-section'>Temp: <span class='weather-datum' id='weather-temp'>0 °F</span></div>
                         <div class='weather-data-section'>Wind: <span class='weather-datum' id='weather-wind'>N 0 mph</span></div>
                         <div class='weather-data-section'>Humidity: <span class='weather-datum' id='weather-humid'>0%</span></div>
                     </div>
                 </span>
             </div>
         </div>
-        <div id='NWS-card' class="mdc-elevation--z3 mdc-card mdc-card__actions mdc-card mdc-card__actions--full-bleed">
-            <h3 class="key-title">GOVERNMENT MESSAGES</h3>
+
+        <div class='card' id='alert-card'>
+            <div class='card-title'>Government Alerts</div>
+            <div class='card-sub-title'><span class='material-icons'>info</span> Public safety messages issued by the National Weather Service</div>
+            <div id='alerts'></div>
         </div>
-        <div id="key-card" class="mdc-elevation--z3 mdc-card">
-            <h3 class="key-title">KEY</h3>
-            <button id='arrow' class="mdc-icon-button material-icons mdc-icon-toggle"
-                onclick='showKey();'>expand_more</button>
-            <p id='key-hide' class='key-description'>
-                <span id='warning' class='label'>WARNING</span> a significant storm is imminent and there is a high
-                chance for an impact to school.
-                <br>
-                <br>
-                <span id='advisory' class='label'>ADVISORY</span> a snow event is likely and there is low (but existent)
-                chance for an impact to school.
-                <br>
-                <br>
-                <span id='watch' class='label'>WATCH</span> a significant storm is possible and there is some chance for
-                an impact to school, but the details are yet to be worked out.
-                <br>
-                <br>
-                <span id='notice' class='label'>NOTICE</span> a snow event is possible in the medium to long term, so
-                check back for updates.
-            </p>
+
+        <div class='card'>
+            <div class='card-title'>Daily Chances</div>
+            <div class='card-sub-title'><span class='material-icons'>assessment</span> The output of a specially-built snow day prediction model</div>
+        
+            <div id='days'></div>
         </div>
-        <div id="nomessage" class="mdc-elevation--z3 mdc-card">
-            <h3 class="key-title">NO SNOWSTORM :(</h3>
-            <p class='key-description'>There currently aren't any snowstorms in the forecast. Check back here regularly
-                to stay updated on possible snow events that could have an impact on school.</p>
-        </div>
-        <div id='message1' class="mdc-card mdc-elevation--z3">
-            <div class="card-content">
-                <p class="status-title none-title">Loading...</p>
-                <h2 class="card-title mdc-typography--headline6">Loading...</h2>
-                <div class="horline-container">
-                    <div class="horizontal-line"></div>
-                </div>
-                <p class="status-timing">Loading...</p>
-                <div class="card-media">
-                    <div class='myChart' id='1chart1'></div>
-                    <div class='hide-menu'></div>
-                </div>
-                <p class='chart-name'>Chance of (At Least) Delay</p>
-                <div class="card-media">
-                    <div class='myChart' id='1chart2'></div>
-                    <div class='hide-menu'></div>
-                </div>
-                <p class='chart-name last-chart-name'>Chance of Snow Day</p>
-                <div class="horline-container">
-                    <div class="horizontal-line"></div>
-                </div>
-                <div class="stat-description percent-label">Loading...</div>
-                <div class="horline-container">
-                    <div class="horizontal-line"></div>
-                </div>
-            </div>
-            <div class="mdc-card__actions">
-                <div class="mdc-card__action-buttons">
-                    <a target=”_blank” class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded"
-                        title="Weather.gov Forecast"
-                        href="https://forecast.weather.gov/MapClick.php?lat=41.03571490000007&lon=-73.86820269999998#.XHtvi5NKgWo">Weather.gov
-                        Forecast</a>
-                </div>
-                <div class="mdc-card__action-icons">
-                    <button
-                        class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon mdc-icon-toggle"
-                        onClick="navigator.share({title: 'Snow Day Forecast',text: 'Snow day forecast for Irvington, NY',url: 'https://snowdayforecast.com',}).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));"
-                        title="Share">share</button>
-                </div>
-            </div>
-        </div>
+
+
     </div>
-    <script src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src="./script.js"></script>
 
-    <!-- Get NWS data -->
-    <script>
-        function nwsCallback(data) {
+    <script src="script.js"></script>
 
-            var obs = data.currentobservation;
-            var iconBase = 'https://forecast.weather.gov/newimages/large/';
-
-            document.getElementById('weather-icon').src = iconBase + obs.Weatherimage;
-            document.getElementById('weather-desc').textContent = obs.Weather;
-            document.getElementById('weather-temp').textContent = obs.Temp + ' °F';
-            document.getElementById('weather-wind').textContent = obs.Winds + ' mph';
-            document.getElementById('weather-humid').textContent = obs.Relh + '%';
-        }
-    </script>
-    <script src='https://forecast.weather.gov/MapClick.php?lat=41.037715&lon=-73.865165&FcstType=json&callback=nwsCallback'></script>
 </body>
 
 </html>
