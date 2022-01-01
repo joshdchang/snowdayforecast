@@ -101,3 +101,6 @@ async function loadModel() {
 
 }
 loadModel()
+
+// Update year
+document.getElementById('year').innerText = new Date().getFullYear()

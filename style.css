@@ -187,25 +187,3 @@ a {
 	width: 0%;
 	height: 40px;
 }
-
-
-
-.myChart {
-	height: 300px;
-	width: 100%;
-	margin-top: -10px;
-	margin-bottom: -115px;
-	display: inline-block;
-	overflow: hidden;
-}
-
-.chart-name {
-	text-align: center;
-	color: #757575;
-	margin-top: 8px;
-	margin-bottom: 20px;
-}
-
-.last-chart-name {
-	margin-bottom: 0px;
-}
